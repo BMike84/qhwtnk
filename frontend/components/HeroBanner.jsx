@@ -5,7 +5,7 @@ const HeroBanner = ({ heroBanner }) => {
   return (
     <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img ">
       <div className="absolute top-0 left-0 right-0 bottom-0  bg-black/70 z-[2]" />
-      <div className="p-5 text-white z-[2] flex justify-center    items-center flex-col w-full mb-[4rem] content-center">
+      <div className="p-5 text-white z-[2] flex justify-center    items-center flex-col w-full mb-[3rem] content-center lg:mt-10">
         <div className="flex justify-center">
           <img
             className="w-[90%] object-center md:w-[70%]"
@@ -19,10 +19,10 @@ const HeroBanner = ({ heroBanner }) => {
           </p>
         </div>
         <div className="flex justify-center gap-4 mt-6">
-          <button className="px-8 py-2 border hover:bg-sky-500 ease-in-out duration-300">
+          <button className="px-8 py-2 border hover:bg-sky-800 ease-in-out duration-300">
             {heroBanner.buttonText1}
           </button>
-          <button className="px-8 py-2 border hover:bg-sky-500  ease-in-out duration-300">
+          <button className="px-8 py-2 border hover:bg-sky-800  ease-in-out duration-300">
             {heroBanner.buttonText2}
           </button>
         </div>
