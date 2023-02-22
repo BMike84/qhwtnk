@@ -3,7 +3,7 @@ import { urlFor } from "@/lib/client";
 
 const HeroBanner = ({ heroBanner }) => {
   return (
-    <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img ">
+    <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover custom-img">
       <div className="absolute top-0 left-0 right-0 bottom-0  bg-black/70 z-[2]" />
       <div className="p-5 text-white z-[2] flex justify-center    items-center flex-col w-full mb-[3rem] content-center lg:mt-10">
         <div className="flex justify-center">
