@@ -69,7 +69,7 @@ const Navbar = () => {
           className="hidden sm:flex font-bold"
         >
           {navLinks.map((item, index) => (
-            <li className="pl-5 hover:text-sky-500 ">
+            <li key={`${item}` + index} className="pl-5 hover:text-sky-500 ">
               <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
@@ -98,7 +98,7 @@ const Navbar = () => {
         >
           <ul className="flex flex-col">
             {navLinks.map((item, index) => (
-              <li className="p-4 text-3xl hover:text-sky-500">
+              <li key={index} className="p-4 text-3xl hover:text-sky-500">
                 <Link href={item.link}>{item.title}</Link>
               </li>
             ))}

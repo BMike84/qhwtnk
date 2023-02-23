@@ -10,6 +10,7 @@ const HeroBanner = ({ heroBanner }) => {
           <img
             className="w-[90%] object-center md:w-[70%]"
             src={urlFor(heroBanner.image)}
+            alt="main background"
           />
         </div>
         <div className=" flex flex-col items-center text-center">
