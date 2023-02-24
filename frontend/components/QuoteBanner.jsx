@@ -4,7 +4,7 @@ import { images } from "@/constants";
 
 const QuoteBanner = () => {
   return (
-    <div className="relative flex flex-col justify-evenly items-center text-center  w-[100%] min-h-[250px] bg-[#282626] text-white">
+    <div className="relative flex flex-col justify-evenly items-center text-center  w-[100%] min-h-[250px] bg-gray-900 text-white">
       <Image
         width={200}
         height={200}

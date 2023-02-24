@@ -8,6 +8,9 @@ import bqhPic from "@/assets/bqhPic.jpeg";
 import mentorship from "@/assets/mentorship.jpeg";
 import moon from "@/assets/moon.jpg";
 import spiritual from "@/assets/spiritual.webp";
+import book from "@/assets/book.gif";
+import cosmicHealing from "@/assets/cosmicHealing.png";
+import bird from "@/assets/bird.png";
 
 export default {
   logo,
@@ -20,4 +23,7 @@ export default {
   mentorship,
   moon,
   spiritual,
+  book,
+  cosmicHealing,
+  bird,
 };

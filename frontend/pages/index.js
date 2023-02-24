@@ -2,16 +2,15 @@ import React from "react";
 import {
   Product,
   Blog,
-  Bqh,
   Contact,
   HeroBanner,
   QuoteBanner,
   Testimonials,
-  TestimonialData,
+  YouTubeBook,
 } from "@/components";
 
 import { client } from "@/lib/client";
-// import { urlFor, client } from '../../client';
+
 const Home = ({ products, bannerData, testimonialsData }) => {
   return (
     <>
@@ -19,7 +18,7 @@ const Home = ({ products, bannerData, testimonialsData }) => {
       <Product products={products} />
       <QuoteBanner />
       <Blog />
-      <Bqh />
+      <YouTubeBook />
       <div className="bg-[#F8F4EA] p-10">
         <h2 className="text-3xl font-bold text-center">
           What People Are Saying!
