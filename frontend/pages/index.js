@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Product,
   Blog,
@@ -11,6 +11,7 @@ import {
 } from "@/components";
 
 import { client } from "@/lib/client";
+import { motion } from "framer-motion";
 
 const Home = ({ products, bannerData, testimonialsData }) => {
   return (
@@ -33,7 +34,9 @@ const Home = ({ products, bannerData, testimonialsData }) => {
         </h2>
         <Testimonials testimonial={testimonialsData} />
       </div>
-      <Contact />
+      <div>
+        <Contact />
+      </div>
     </>
   );
 };

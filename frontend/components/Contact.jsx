@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import images from "@/constants/images";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const form = useRef();
@@ -49,7 +50,11 @@ const Contact = () => {
   return (
     <section className="bg-white dark:bg-gray-900 p-4">
       <div className="py-8 lg:py-16 px-4">
-        <div className="flex flex-col justify-center items-center gap-3 lg:gap-10 md:gap-2 md:flex-row md:items-center mb-10 max-w[800px]">
+        <motion.div
+          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ type: "spring", duration: 5, bounce: 0.3 }}
+          className="flex flex-col justify-center items-center gap-3 lg:gap-10 md:gap-2 md:flex-row md:items-center mb-10 max-w[800px]"
+        >
           <Image
             alt="spiritual"
             width={250}
@@ -75,7 +80,7 @@ const Contact = () => {
             src={images.spiritual}
             className="hidden md:block rounded-xl hover:scale-105 ease-in duration-300 md:w-[200px] lg:w-[250px]"
           />
-        </div>
+        </motion.div>
         {!isFormSubmitted ? (
           <form ref={form} className="space-y-8 max-w-screen-md mx-auto">
             <div>

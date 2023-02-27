@@ -3,7 +3,7 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { urlFor } from "@/lib/client";
 import Image from "next/image";
 import images from "@/constants/images";
-
+import { motion } from "framer-motion";
 const Testimonials = ({ testimonial }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
@@ -22,7 +22,11 @@ const Testimonials = ({ testimonial }) => {
         {testimonials.length && (
           <>
             {/* Cards */}
-            <div className="relative flex flex-col md:w-[80%] lg:w-[60%] min-h-[270px] text-gray-700  md:p-6 rounded-lg ">
+            <motion.div
+              whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+              transition={{ type: "spring", duration: 5, bounce: 0.3 }}
+              className="relative flex flex-col md:w-[80%] lg:w-[60%] min-h-[270px] text-gray-700  md:p-6 rounded-lg "
+            >
               <Image
                 width={300}
                 height={300}
@@ -46,7 +50,7 @@ const Testimonials = ({ testimonial }) => {
                   {testimonials[currentIndex].feedback}
                 </p>
               </div>
-            </div>
+            </motion.div>
             {/* Arrows for slide */}
             <div className="flex gap-3 mt-1 app__testimonial-btns app__flex">
               <div

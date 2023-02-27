@@ -1,10 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import { images } from "@/constants";
+import { motion } from "framer-motion";
 
-const QuoteBanner = () => {
+const QuoteBanner = ({ ref, animate }) => {
   return (
-    <div className="relative flex flex-col justify-evenly items-center text-center  w-[100%] min-h-[250px] bg-gray-900 text-white">
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ type: "spring", duration: 5, bounce: 0.3 }}
+      className="relative flex flex-col justify-evenly items-center text-center  w-[100%] min-h-[250px] bg-gray-900 text-white"
+    >
       <Image
         width={200}
         height={200}
@@ -24,7 +29,7 @@ const QuoteBanner = () => {
         src={images.heart}
         className="absolute w-[80px] md:w-[200px] bottom-8 right-3 md:top-8 md:right-4 z-0 opacity-30"
       />
-    </div>
+    </motion.div>
   );
 };
 

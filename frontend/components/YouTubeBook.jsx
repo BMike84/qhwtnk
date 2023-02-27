@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { images } from "@/constants";
+import { motion } from "framer-motion";
 
 const YouTubeBook = () => {
   return (
@@ -18,7 +19,11 @@ const YouTubeBook = () => {
         src={images.cosmicHealing}
         className="absolute bottom-0 right-2 md:hidden lg:block  lg:bottom-8 lg:right-6 opacity-30 rounded-full"
       />
-      <div className="flex flex-col items-center">
+      <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 1 }}
+        className="flex flex-col items-center"
+      >
         <p className="text-center mb-6 font-bold text-lg">
           Featured Youtube Video
         </p>
@@ -33,8 +38,11 @@ const YouTubeBook = () => {
         <button className="px-8 py-2 border-2 border-white h font-bold text-white uppercase hover:bg-white hover:text-black ease-in duration-200">
           Youtube Page
         </button>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ type: "spring", duration: 5, bounce: 0.3 }}
+      >
         <p className="text-center mb-6 font-bold text-lg">Our Book</p>
         <Link href="https://www.balboapress.com/en/bookstore/bookdetails/720450-loveyourself">
           <Image
@@ -43,7 +51,7 @@ const YouTubeBook = () => {
             className="hover:scale-105 ease-in duration-300 md:w-[180px] lg:w-[220px]"
           />
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,10 +1,15 @@
 import React from "react";
 import { urlFor } from "@/lib/client";
+import { motion } from "framer-motion";
 
 const Product = ({ products }) => {
   return (
     <div className="bg-[#F8F4EA]">
-      <div className="mx-auto max-w-2xl py-8 px-4  sm:px-6 lg:max-w-7xl lg:px-4">
+      <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ type: "spring", duration: 5, bounce: 0.3 }}
+        className="mx-auto max-w-2xl py-8 px-4  sm:px-6 lg:max-w-7xl lg:px-4"
+      >
         <h2 className="text-3xl font-bold mb-8 text-center ">
           Our Featured Services
         </h2>
@@ -29,7 +34,7 @@ const Product = ({ products }) => {
               )
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
