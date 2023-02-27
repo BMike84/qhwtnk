@@ -4,31 +4,34 @@ import {
   Blog,
   Contact,
   HeroBanner,
-  QuoteBanner,
   Testimonials,
   YouTubeBook,
   Meet,
+  NavigationDots,
+  SocialMedia,
+  Copyright,
 } from "@/components";
 
 import { client } from "@/lib/client";
-import { motion } from "framer-motion";
 
 const Home = ({ products, bannerData, testimonialsData }) => {
   return (
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <Product products={products} />
-      <div className="bg-gray-900 text-white pt-4">
+      <div className="bg-gray-900 text-white pt-8">
         <h2 className="text-center text-2xl md900:text-3xl font-bold">
           Meet The Team
         </h2>
         <Meet />
-        <QuoteBanner />
       </div>
 
       <Blog />
       <YouTubeBook />
-      <div className="bg-[#F8F4EA] p-10">
+      <div className="relative bg-[#F8F4EA] p-10">
+        <SocialMedia />
+        <NavigationDots />
+        <Copyright />
         <h2 className="text-3xl font-bold text-center">
           What People Are Saying!
         </h2>

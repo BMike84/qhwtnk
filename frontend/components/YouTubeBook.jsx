@@ -3,10 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { images } from "@/constants";
 import { motion } from "framer-motion";
+import { Copyright, NavigationDots, SocialMedia } from ".";
 
 const YouTubeBook = () => {
   return (
-    <div className="relative flex flex-col items-center md:items-start md:flex-row justify-center gap-14 bg-gray-900 p-8 text-white">
+    <div
+      id="youtubeBook"
+      className="relative flex flex-col items-center md:items-start md:flex-row justify-center gap-14 bg-gray-900 p-8 text-white"
+    >
       <Image
         width={200}
         height={200}
@@ -48,10 +52,13 @@ const YouTubeBook = () => {
           <Image
             width={200}
             src={images.book}
-            className="hover:scale-105 ease-in duration-300 md:w-[180px] lg:w-[220px]"
+            className="hover:scale-105 ease-in duration-300 md:w-[180px] lg:w-[200px]"
           />
         </Link>
       </motion.div>
+      <SocialMedia />
+      <NavigationDots />
+      <Copyright />
     </div>
   );
 };

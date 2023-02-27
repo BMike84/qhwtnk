@@ -9,3 +9,6 @@ export { default as QuoteBanner } from "./QuoteBanner";
 export { default as Testimonials } from "./Testimonials";
 export { default as YouTubeBook } from "./YouTubeBook";
 export { default as Meet } from "./Meet";
+export { default as NavigationDots } from "./NavigationDots";
+export { default as SocialMedia } from "./SocialMedia";
+export { default as Copyright } from "./Copyright";

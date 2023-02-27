@@ -3,6 +3,7 @@ import Image from "next/image";
 import images from "@/constants/images";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { NavigationDots, SocialMedia } from ".";
 
 const Contact = () => {
   const form = useRef();
@@ -48,7 +49,9 @@ const Contact = () => {
       );
   };
   return (
-    <section className="bg-white dark:bg-gray-900 p-4">
+    <section id="contact" className="relative bg-white dark:bg-gray-900 p-4">
+      <NavigationDots />
+      <SocialMedia />
       <div className="py-8 lg:py-16 px-4">
         <motion.div
           whileInView={{ x: [-100, 0], opacity: [0, 1] }}

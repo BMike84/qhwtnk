@@ -4,6 +4,9 @@ import { urlFor } from "@/lib/client";
 import Image from "next/image";
 import images from "@/constants/images";
 import { motion } from "framer-motion";
+
+import { Copyright, NavigationDots, SocialMedia } from ".";
+
 const Testimonials = ({ testimonial }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
@@ -18,14 +21,17 @@ const Testimonials = ({ testimonial }) => {
 
   return (
     <>
-      <div className="antialiased flex flex-col items-center justify-center mt-6">
+      <div
+        id="testimonials"
+        className="antialiased flex flex-col items-center justify-center mt-6"
+      >
         {testimonials.length && (
           <>
             {/* Cards */}
             <motion.div
               whileInView={{ x: [-100, 0], opacity: [0, 1] }}
               transition={{ type: "spring", duration: 5, bounce: 0.3 }}
-              className="relative flex flex-col md:w-[80%] lg:w-[60%] min-h-[270px] text-gray-700  md:p-6 rounded-lg "
+              className="relative flex flex-col md:w-[80%] lg:w-[100%] min-h-[270px]text-gray-700  md:p-6 rounded-lg "
             >
               <Image
                 width={300}

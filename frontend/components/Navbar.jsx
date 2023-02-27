@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { images } from "@/constants/index";
+import * as Scroll from "react-scroll";
 
 import { IoMdHeartDislike } from "react-icons/io";
 import { FaHandHoldingHeart } from "react-icons/fa";
 
 const navLinks = [
   {
-    link: "/",
+    link: "#home",
     title: "Home",
   },
   {
@@ -61,7 +62,7 @@ const Navbar = () => {
       className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
     >
       <div className="max-w-[1440px]  flex justify-between items-center px-7 py-4 text-white">
-        <Link href="/" className="text-center">
+        <Link href="/" scroll={true} className="text-center">
           <Image src={logoColor} width={200} height={200} alt="logo" />
         </Link>
         <ul
@@ -69,8 +70,10 @@ const Navbar = () => {
           className="hidden sm:flex font-bold"
         >
           {navLinks.map((item, index) => (
-            <li key={`${item}` + index} className="pl-5 hover:text-sky-500 ">
-              <Link href={item.link}>{item.title}</Link>
+            <li key={`${item}` + index} className="pl-5  hover:text-sky-500 ">
+              <Link href={item.link} scroll={false}>
+                {item.title}
+              </Link>
             </li>
           ))}
         </ul>

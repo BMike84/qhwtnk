@@ -2,13 +2,15 @@ import React from "react";
 import Image from "next/image";
 import { images } from "@/constants";
 import { motion } from "framer-motion";
+import { NavigationDots, QuoteBanner, SocialMedia, Copyright } from ".";
 
 const Meet = () => {
   return (
     <motion.section
+      id="meet"
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ type: "spring", duration: 5, bounce: 0.3 }}
-      className="flex flex-col gap-5  text-white p-3 md:px-10"
+      className="relative flex flex-col gap-5  text-white p-3 md:px-10"
     >
       <div className="relative flex flex-col gap-3 items-end smXl:flex-row smXl:items-center md: justify-between md900:justify-evenly">
         <Image
@@ -72,6 +74,10 @@ const Meet = () => {
           </div>
         </div>
       </div>
+      <QuoteBanner />
+      <NavigationDots />
+      <SocialMedia />
+      <Copyright />
     </motion.section>
   );
 };
