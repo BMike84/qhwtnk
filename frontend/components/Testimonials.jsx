@@ -21,10 +21,7 @@ const Testimonials = ({ testimonial }) => {
 
   return (
     <>
-      <div
-        id="testimonials"
-        className="antialiased flex flex-col items-center justify-center mt-6"
-      >
+      <div className="antialiased flex flex-col items-center justify-center mt-6">
         {testimonials.length && (
           <>
             {/* Cards */}

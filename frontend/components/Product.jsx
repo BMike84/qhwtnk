@@ -1,10 +1,14 @@
 import React from "react";
 import { urlFor } from "@/lib/client";
 import { motion } from "framer-motion";
+import { Copyright, NavigationDots, SocialMedia } from ".";
 
 const Product = ({ products }) => {
   return (
-    <div id="services" className="bg-[#F8F4EA]">
+    <div id="services" className="relative bg-[#F8F4EA]">
+      <SocialMedia />
+      <NavigationDots />
+      <Copyright />
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ type: "spring", duration: 5, bounce: 0.3 }}
@@ -13,7 +17,7 @@ const Product = ({ products }) => {
         <h2 className="text-3xl font-bold mb-8 text-center ">
           Our Featured Services
         </h2>
-        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mb-24 ">
           {products.map(
             (product) =>
               product.feature && (

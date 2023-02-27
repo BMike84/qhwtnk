@@ -8,7 +8,7 @@ const QuoteBanner = ({ ref, animate }) => {
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ type: "spring", duration: 5, bounce: 0.3 }}
-      className="relative flex flex-col justify-evenly items-center text-center  w-[100%] min-h-[250px] bg-gray-900 text-white"
+      className="relative flex flex-col justify-evenly items-center text-center  w-[100%] min-h-[250px] bg-gray-900 text-white mb-16"
     >
       <Image
         width={200}

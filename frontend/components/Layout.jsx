@@ -8,9 +8,7 @@ const Layout = ({ children }) => {
       <Head>
         <title>QHWTNK</title>
       </Head>
-      <header>
-        <Navbar />
-      </header>
+      <header>{/* <Navbar /> */}</header>
       <main className="scroll-smooth">{children}</main>
     </>
   );

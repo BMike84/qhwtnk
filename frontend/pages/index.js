@@ -19,7 +19,7 @@ const Home = ({ products, bannerData, testimonialsData }) => {
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <Product products={products} />
-      <div className="bg-gray-900 text-white pt-8">
+      <div id="meet" className="bg-gray-900 text-white pt-8">
         <h2 className="text-center text-2xl md900:text-3xl font-bold">
           Meet The Team
         </h2>
@@ -28,7 +28,7 @@ const Home = ({ products, bannerData, testimonialsData }) => {
 
       <Blog />
       <YouTubeBook />
-      <div className="relative bg-[#F8F4EA] p-10">
+      <div id="testimonials" className="relative bg-[#F8F4EA] p-10">
         <SocialMedia />
         <NavigationDots />
         <Copyright />
