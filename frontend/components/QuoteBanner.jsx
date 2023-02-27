@@ -11,7 +11,7 @@ const QuoteBanner = () => {
         src={images.heart}
         className="absolute hidden md:block top-8 left-3 md:top-8 md:right-4 z-0 opacity-30"
       />
-      <h3 className="flex p-4 lg:w-[70%] lg:text-2xl">
+      <h3 className="flex p-4  md900:w-[90%] md900:text-2xl lg:w-[70%]">
         " There is an infinite amount of wisdom held within your soul, a
         treasure trove of love, beauty, and understanding. I'm here to help you
         uncover the secrets that lie within so you may receive the healing you

@@ -8,3 +8,4 @@ export { default as Product } from "./Product";
 export { default as QuoteBanner } from "./QuoteBanner";
 export { default as Testimonials } from "./Testimonials";
 export { default as YouTubeBook } from "./YouTubeBook";
+export { default as Meet } from "./Meet";

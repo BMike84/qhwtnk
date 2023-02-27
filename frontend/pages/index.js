@@ -7,6 +7,7 @@ import {
   QuoteBanner,
   Testimonials,
   YouTubeBook,
+  Meet,
 } from "@/components";
 
 import { client } from "@/lib/client";
@@ -16,7 +17,14 @@ const Home = ({ products, bannerData, testimonialsData }) => {
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <Product products={products} />
-      <QuoteBanner />
+      <div className="bg-gray-900 text-white pt-4">
+        <h2 className="text-center text-2xl md900:text-3xl font-bold">
+          Meet The Team
+        </h2>
+        <Meet />
+        <QuoteBanner />
+      </div>
+
       <Blog />
       <YouTubeBook />
       <div className="bg-[#F8F4EA] p-10">

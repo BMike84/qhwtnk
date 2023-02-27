@@ -11,6 +11,8 @@ import spiritual from "@/assets/spiritual.webp";
 import book from "@/assets/book.gif";
 import cosmicHealing from "@/assets/cosmicHealing.png";
 import bird from "@/assets/bird.png";
+import tenaMain from "@/assets/tenaMain.webp";
+import karenMain from "@/assets/karenMain.webp";
 
 export default {
   logo,
@@ -26,4 +28,6 @@ export default {
   book,
   cosmicHealing,
   bird,
+  tenaMain,
+  karenMain,
 };
