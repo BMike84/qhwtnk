@@ -82,7 +82,7 @@ const Navbar = () => {
           ))}
         </ul>
         <button
-          className="hidden lg:block z-10 px-8 py-1.5 border hover:bg-sky-800 ease-in-out font-bold duration-300"
+          className="hidden lg:block z-10 px-8 py-[0.40rem] border ease-in-out font-bold duration-300 rounded-3xl hover:bg-sky-500"
           style={{ color: `${textColor}`, border: `2px solid ${borderColor}` }}
         >
           Book Now

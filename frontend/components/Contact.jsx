@@ -58,8 +58,8 @@ const Contact = () => {
       <Copyright />
       <div className="py-8 lg:py-16 px-4 mb-14">
         <motion.div
-          whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-          transition={{ type: "spring", duration: 5, bounce: 0.3 }}
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 3 }}
           className="flex flex-col justify-center items-center gap-3 lg:gap-10 md:gap-2 md:flex-row md:items-center mb-10 max-w[800px]"
         >
           <Image

@@ -24,8 +24,8 @@ const YouTubeBook = () => {
         className="hidden mdSm:absolute bottom-20 right-2 mdSm:bottom-64 mdSm:w-[160px] md:hidden lg:block  lg:bottom-8 lg:right-6 opacity-30 rounded-full"
       />
       <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 1 }}
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 3 }}
         className="flex flex-col items-center"
       >
         <p className="text-center mb-6 font-bold text-lg">
@@ -44,8 +44,8 @@ const YouTubeBook = () => {
         </button>
       </motion.div>
       <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ type: "spring", duration: 5, bounce: 0.3 }}
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 3 }}
         className="mb-20"
       >
         <p className="text-center mb-6 font-bold text-lg">Our Book</p>

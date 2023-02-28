@@ -11,7 +11,7 @@ const Product = ({ products }) => {
       <Copyright />
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ type: "spring", duration: 5, bounce: 0.3 }}
+        transition={{ duration: 1 }}
         className="flex flex-col items-center w-full"
       >
         <h2 className="text-3xl font-bold mb-8 text-center ">

@@ -27,7 +27,7 @@ const Testimonials = ({ testimonial }) => {
             {/* Cards */}
             <motion.div
               whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-              transition={{ type: "spring", duration: 5, bounce: 0.3 }}
+              transition={{ duration: 1 }}
               className="relative flex flex-col md:w-[80%] lg:w-[100%] min-h-[270px]text-gray-700  md:p-6 rounded-lg "
             >
               <Image
