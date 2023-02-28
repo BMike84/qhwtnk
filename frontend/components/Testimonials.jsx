@@ -80,7 +80,7 @@ const Testimonials = ({ testimonial }) => {
                 <HiChevronRight className="text-5xl border-2 border-black rounded-full" />
               </div>
             </div>
-            <button className="mt-9 px-8 py-1.5 border-2 border-black h font-bold ">
+            <button className="mt-9 mb-14 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
               View More
             </button>
           </>

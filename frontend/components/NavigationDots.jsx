@@ -11,7 +11,7 @@ const links = [
 
 const NavigationDots = () => {
   return (
-    <div className="flex flex-col justify-between h-auto gap-4 p-1 absolute md:top-1/3 md:right-4">
+    <div className="hidden md:flex flex-col justify-between h-auto gap-4 p-1 absolute md:top-1/3 md:right-4">
       {links.map((item, index) => (
         <a
           href={`#${item}`}

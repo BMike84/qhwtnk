@@ -5,19 +5,19 @@ import { Copyright, NavigationDots, SocialMedia } from ".";
 
 const Product = ({ products }) => {
   return (
-    <div id="services" className="relative bg-[#F8F4EA]">
+    <div id="services" className="relative bg-[#F8F4EA] p-4 scroll-mt-32">
       <SocialMedia />
       <NavigationDots />
       <Copyright />
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ type: "spring", duration: 5, bounce: 0.3 }}
-        className="mx-auto max-w-2xl py-8 px-4  sm:px-6 lg:max-w-7xl lg:px-4"
+        className="flex flex-col items-center w-full"
       >
         <h2 className="text-3xl font-bold mb-8 text-center ">
           Our Featured Services
         </h2>
-        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mb-24 ">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mb-3">
           {products.map(
             (product) =>
               product.feature && (
@@ -26,7 +26,7 @@ const Product = ({ products }) => {
                     <img
                       src={urlFor(product.image && product.image[0])}
                       alt={product.imageAlt}
-                      className="h-[200px] w-full object-cover object-center group-hover:opacity-75"
+                      className="h-[200px] w-full object-cover object-center group-hover:opacity-75 "
                     />
                   </div>
                   <h3 className="mt-4 text-md text-gray-700">{product.name}</h3>
@@ -37,6 +37,9 @@ const Product = ({ products }) => {
               )
           )}
         </div>
+        <button className="mb-20 md:mb-14 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
+          View All
+        </button>
       </motion.div>
     </div>
   );

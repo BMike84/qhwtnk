@@ -3,7 +3,7 @@ import Image from "next/image";
 import images from "@/constants/images";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { NavigationDots, SocialMedia } from ".";
+import { Copyright, NavigationDots, SocialMedia } from ".";
 
 const Contact = () => {
   const form = useRef();
@@ -49,10 +49,14 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className="relative bg-white dark:bg-gray-900 p-4">
+    <section
+      id="contact"
+      className="relative bg-white text-white dark:bg-gray-900 p-4 scroll-mt-32"
+    >
       <NavigationDots />
       <SocialMedia />
-      <div className="py-8 lg:py-16 px-4">
+      <Copyright />
+      <div className="py-8 lg:py-16 px-4 mb-14">
         <motion.div
           whileInView={{ x: [-100, 0], opacity: [0, 1] }}
           transition={{ type: "spring", duration: 5, bounce: 0.3 }}
@@ -99,7 +103,7 @@ const Contact = () => {
                 id="name"
                 value={user_name}
                 onChange={handleChangeInput}
-                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light mb-3"
                 placeholder="Jane Doe"
                 required
               />

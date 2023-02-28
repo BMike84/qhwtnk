@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { images } from "@/constants/index";
-import * as Scroll from "react-scroll";
 
 import { IoMdHeartDislike } from "react-icons/io";
 import { FaHandHoldingHeart } from "react-icons/fa";
@@ -71,7 +70,12 @@ const Navbar = () => {
         >
           {navLinks.map((item, index) => (
             <li key={`${item}` + index} className="pl-5  hover:text-sky-500 ">
-              <Link href={item.link} scroll={false}>
+              <Link
+                id="anchor"
+                href={item.link}
+                scroll={false}
+                className="linkTag"
+              >
                 {item.title}
               </Link>
             </li>
