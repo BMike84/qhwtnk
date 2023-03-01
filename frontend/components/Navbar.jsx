@@ -12,11 +12,11 @@ const navLinks = [
     title: "Home",
   },
   {
-    link: "/#services",
+    link: "/#featureservices",
     title: "Services",
   },
   {
-    link: "/#blog",
+    link: "/#featureblog",
     title: "Blog",
   },
   {
@@ -109,7 +109,7 @@ const Navbar = () => {
                 <Link href={item.link}>{item.title}</Link>
               </li>
             ))}
-            <button className="block text-2xl px-8 py-2 mt-3 border hover:bg-sky-800 ease-in-out duration-300">
+            <button className="block text-2xl px-7 py-[.40rem] mt-3 border ease-in-out duration-300 rounded-3xl">
               Book Now
             </button>
           </ul>

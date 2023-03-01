@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import {
-  Product,
-  Blog,
+  ServiceCard,
+  BlogCard,
   Contact,
   HeroBanner,
-  Testimonials,
+  TestimonialsCard,
   YouTubeBook,
   Meet,
   NavigationDots,
@@ -13,12 +13,13 @@ import {
 } from "@/components";
 
 import { client } from "@/lib/client";
+import groq from "groq";
 
-const Home = ({ products, bannerData, testimonialsData }) => {
+const Home = ({ products, bannerData, testimonialsData, blogPostData }) => {
   return (
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-      <Product products={products} />
+      <ServiceCard products={products} />
       <div id="meet" className="bg-gray-900 text-white pt-8 scroll-mt-32">
         <h2 className="text-center text-2xl md900:text-3xl font-bold">
           Meet The Team
@@ -26,10 +27,10 @@ const Home = ({ products, bannerData, testimonialsData }) => {
         <Meet />
       </div>
 
-      <Blog />
+      <BlogCard posts={blogPostData} />
       <YouTubeBook />
       <div
-        id="testimonials"
+        id="testimonialsSection"
         className="relative bg-[#F8F4EA] p-10 scroll-mt-32"
       >
         <SocialMedia />
@@ -38,7 +39,7 @@ const Home = ({ products, bannerData, testimonialsData }) => {
         <h2 className="text-3xl font-bold text-center">
           What People Are Saying!
         </h2>
-        <Testimonials testimonial={testimonialsData} />
+        <TestimonialsCard testimonial={testimonialsData} />
       </div>
       <div>
         <Contact />
@@ -57,8 +58,21 @@ export const getServerSideProps = async () => {
   const testimonialsQuery = '*[_type == "testimonials"]';
   const testimonialsData = await client.fetch(testimonialsQuery);
 
+  const blogPost = groq`*[_type == "post"] {
+   _id,
+   title,
+   "username": author->name,
+   "categories": categories[]->{id, title},
+   "authorImage": author->image,
+   body,
+   mainImage,
+   slug,
+   publishedAt
+  } | order(_createdAt desc)`;
+  const blogPostData = await client.fetch(blogPost);
+
   return {
-    props: { products, bannerData, testimonialsData },
+    props: { products, bannerData, testimonialsData, blogPostData },
   };
 };
 

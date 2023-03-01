@@ -3,9 +3,12 @@ import { urlFor } from "@/lib/client";
 import { motion } from "framer-motion";
 import { Copyright, NavigationDots, SocialMedia } from ".";
 
-const Product = ({ products }) => {
+const ServiceCard = ({ products }) => {
   return (
-    <div id="services" className="relative bg-[#F8F4EA] p-4 scroll-mt-32">
+    <div
+      id="featureservices"
+      className="relative bg-[#F8F4EA] p-4 scroll-mt-32"
+    >
       <SocialMedia />
       <NavigationDots />
       <Copyright />
@@ -14,7 +17,7 @@ const Product = ({ products }) => {
         transition={{ duration: 1 }}
         className="flex flex-col items-center w-full"
       >
-        <h2 className="text-3xl font-bold mb-8 text-center ">
+        <h2 className="text-3xl font-bold mb-8 text-center">
           Our Featured Services
         </h2>
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mb-3">
@@ -45,4 +48,4 @@ const Product = ({ products }) => {
   );
 };
 
-export default Product;
+export default ServiceCard;

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 import { Copyright, NavigationDots, SocialMedia } from ".";
 
-const Testimonials = ({ testimonial }) => {
+const TestimonialsCard = ({ testimonial }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
 
@@ -90,4 +90,4 @@ const Testimonials = ({ testimonial }) => {
   );
 };
 
-export default Testimonials;
+export default TestimonialsCard;

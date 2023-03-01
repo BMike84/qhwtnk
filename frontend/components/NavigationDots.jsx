@@ -1,11 +1,11 @@
 import React from "react";
 const links = [
   "home",
-  "services",
+  "featureservices",
   "meet",
-  "blog",
+  "featureblog",
   "youtubeBook",
-  "testimonials",
+  "testimonialsSection",
   "contact",
 ];
 import { Tooltip } from "@nextui-org/react";

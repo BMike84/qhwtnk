@@ -1,12 +1,12 @@
-export { default as Blog } from "./Blog";
+export { default as BlogCard } from "./BlogCard";
 export { default as Contact } from "./Contact";
 export { default as Footer } from "./Footer";
 export { default as HeroBanner } from "./HeroBanner";
 export { default as Layout } from "./Layout";
 export { default as Navbar } from "./Navbar";
-export { default as Product } from "./Product";
+export { default as ServiceCard } from "./ServiceCard";
 export { default as QuoteBanner } from "./QuoteBanner";
-export { default as Testimonials } from "./Testimonials";
+export { default as TestimonialsCard } from "./TestimonialsCard";
 export { default as YouTubeBook } from "./YouTubeBook";
 export { default as Meet } from "./Meet";
 export { default as NavigationDots } from "./NavigationDots";
