@@ -7,9 +7,6 @@ import {
   TestimonialsCard,
   YouTubeBook,
   Meet,
-  NavigationDots,
-  SocialMedia,
-  Copyright,
 } from "@/components";
 
 import { client } from "@/lib/client";

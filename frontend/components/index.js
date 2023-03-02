@@ -12,3 +12,5 @@ export { default as Meet } from "./Meet";
 export { default as NavigationDots } from "./NavigationDots";
 export { default as SocialMedia } from "./SocialMedia";
 export { default as Copyright } from "./Copyright";
+export { default as DropDownServices } from "./DropDownServices";
+export { default as DropDownWhatIs } from "./DropDownWhatIs";

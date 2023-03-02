@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { images } from "@/constants/index";
 import { motion } from "framer-motion";
 import { IoMdHeartDislike } from "react-icons/io";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import { DropDownServices, DropDownWhatIs } from ".";
 
 const navLinks = [
   {
@@ -20,9 +21,14 @@ const navLinks = [
     title: "Blog",
   },
   {
+    link: "/#whatis",
+    title: "What Is?",
+  },
+  {
     link: "/#contact",
     title: "Contact",
   },
+
   {
     link: "/#book",
     title: "Book Now",
@@ -87,9 +93,19 @@ const Navbar = () => {
                 {item.title}
               </Link>
             </li>
+          ) : item.title === "Services" ? (
+            <DropDownServices />
+          ) : item.title === "What Is?" ? (
+            <DropDownWhatIs />
           ) : (
             <li key={`link-${item.title}`}>
-              <Link href={item.link}>{item.title}</Link>
+              <Link
+                scroll={false}
+                href={item.link}
+                className="hover:text-sky-500"
+              >
+                {item.title}
+              </Link>
             </li>
           )
         )}
@@ -98,8 +114,8 @@ const Navbar = () => {
         href="/"
         className={
           buttonColor
-            ? "hidden md:block border-2  border-black z-10 px-3 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl"
-            : "hidden md:block border-2 z-10 px-3 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl"
+            ? "hidden md:block border-2  border-black z-10 px-3 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
+            : "hidden md:block border-2 z-10 px-3 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
         }
       >
         Book Now
@@ -117,13 +133,23 @@ const Navbar = () => {
             >
               <IoMdHeartDislike onClick={() => setToggle(false)} />
               <ul className="h-full w-full">
-                {navLinks.map((item, index) => (
-                  <li key={index} className="m-4">
-                    <Link href={item.link} onClick={() => setToggle(false)}>
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
+                {navLinks.map((item, index) =>
+                  item.title === "Services" ? (
+                    <DropDownServices />
+                  ) : item.title === "What Is?" ? (
+                    <DropDownWhatIs />
+                  ) : (
+                    <li className="py-8" key={`link-${item.title}`}>
+                      <Link
+                        href={item.link}
+                        className="hover:text-sky-500"
+                        onClick={() => setToggle(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  )
+                )}
               </ul>
             </motion.div>
           </>
