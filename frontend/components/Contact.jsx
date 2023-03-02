@@ -69,14 +69,14 @@ const Contact = () => {
             src={images.spiritual}
             className="md:block rounded-xl hover:scale-105 ease-in duration-300 md:w-[200px] lg:w-[250px]"
           />
-          <div className="">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+          <div>
+            <h2 className="mb-4 text-2xl lg:text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
               Contact Us
             </h2>
-            <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+            <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-lg lg:text-xl ">
               For General Inquiries and Bookings
             </p>
-            <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+            <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-lg lg:text-xl">
               Email: QuantumHealingwithTena@gmail.com
             </p>
           </div>
@@ -89,30 +89,19 @@ const Contact = () => {
           />
         </motion.div>
         {!isFormSubmitted ? (
-          <form ref={form} className="space-y-8 max-w-screen-md mx-auto">
+          <form ref={form} className="space-y-8 max-w-screen-md mx-auto px-4">
             <div>
-              <label
-                for="name"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
-                Your Name
-              </label>
               <input
                 type="text"
                 name="user_name"
                 id="name"
                 value={user_name}
                 onChange={handleChangeInput}
-                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light mb-3"
+                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light mb-7"
                 placeholder="Jane Doe"
                 required
               />
-              <label
-                for="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
-                Your email
-              </label>
+
               <input
                 type="email"
                 name="user_email"
@@ -125,12 +114,6 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label
-                for="subject"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
-                Subject
-              </label>
               <input
                 type="text"
                 name="user_subject"
@@ -143,12 +126,6 @@ const Contact = () => {
               />
             </div>
             <div className="sm:col-span-2">
-              <label
-                for="message"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-              >
-                Your message
-              </label>
               <textarea
                 id="message"
                 rows="6"

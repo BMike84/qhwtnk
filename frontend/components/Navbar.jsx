@@ -90,7 +90,7 @@ const Navbar = () => {
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <IoMdHeartDislike size={20} style={{ color: `${textColor}` }} />
+            <IoMdHeartDislike size={20} />
           ) : (
             <FaHandHoldingHeart size={20} style={{ color: `${textColor}` }} />
           )}
@@ -106,7 +106,9 @@ const Navbar = () => {
           <ul className="flex flex-col">
             {navLinks.map((item, index) => (
               <li key={index} className="p-4 text-3xl hover:text-sky-500">
-                <Link href={item.link}>{item.title}</Link>
+                <Link onClick={handleNav} href={item.link}>
+                  {item.title}
+                </Link>
               </li>
             ))}
             <button className="block text-2xl px-7 py-[.40rem] mt-3 border ease-in-out duration-300 rounded-3xl">

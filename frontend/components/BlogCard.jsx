@@ -8,7 +8,7 @@ const BlogCard = ({ posts }) => {
   return (
     <div
       id="featureblog"
-      className="relative bg-[#F8F4EA] py-4 px-14 scroll-mt-32"
+      className="relative bg-[#F8F4EA] py-20 px-8 md:px-14 scroll-mt-32"
     >
       <SocialMedia />
       <NavigationDots />
@@ -23,9 +23,12 @@ const BlogCard = ({ posts }) => {
         </h2>
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-1 mb-3">
           {posts.map((post) => (
-            <div className="w-[90%]">
-              <Link key={post._id} href="" className="group">
-                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 mb-4">
+            <div
+              key={post._id}
+              className="md:w-[100%] border-2 pb-4 rounded-lg bg-white"
+            >
+              <Link href="" className="group">
+                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden  bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 mb-4">
                   <img
                     src={urlFor(post.mainImage)}
                     alt={post.title}
@@ -33,10 +36,10 @@ const BlogCard = ({ posts }) => {
                   />
                 </div>
                 <div className="flex flex-col justify-between h-[100px]">
-                  <h2 className="text-xl font-bold text-center">
+                  <h2 className=" text-base md:text-xl font-bold text-center px-2">
                     {post.title}
                   </h2>
-                  <div className="flex items-end justify-evenly font-medium text-lg  text-gray-900">
+                  <div className="flex items-end justify-evenly font-medium text-sm   md:text-lg  text-gray-900">
                     <p>{post.username}</p>
                     <p>{new Date(post.publishedAt).toDateString()}</p>
                   </div>
