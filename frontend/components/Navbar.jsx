@@ -111,7 +111,7 @@ const Navbar = () => {
             <motion.div
               whileInView={{ x: [200, 0] }}
               transition={{ duration: 0.85, ease: "easeOut" }}
-              className="fixed top-0 right-0 bottom-0 z-[5] p-4 w-[80%] h-screen flex justify-end items-end flex-col bg-black"
+              className="fixed top-0 right-0 bottom-0 z-[5] p-4 w-[80%] h-screen flex justify-end items-end flex-col bg-black text-white"
             >
               <IoMdHeartDislike onClick={() => setToggle(false)} />
               <ul className="h-full w-full">
