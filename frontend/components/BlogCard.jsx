@@ -8,7 +8,7 @@ const BlogCard = ({ posts }) => {
   return (
     <div
       id="featureblog"
-      className="relative bg-[#F8F4EA] py-20 px-8 md:px-14 scroll-mt-32"
+      className="relative bg-[#F8F4EA] py-10 px-8 md:px-14 scroll-mt-24"
     >
       <SocialMedia />
       <NavigationDots />
@@ -21,7 +21,7 @@ const BlogCard = ({ posts }) => {
         <h2 className="text-3xl font-bold mb-8 text-center">
           Our Latest Blog Post
         </h2>
-        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-1 mb-3">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-5 mb-3">
           {posts.map((post) => (
             <div
               key={post._id}

@@ -51,7 +51,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative bg-white text-white dark:bg-gray-900 p-4 scroll-mt-32"
+      className="relative bg-white text-white dark:bg-gray-900 py-10 px-8 md:px-14 scroll-mt-24"
     >
       <NavigationDots />
       <SocialMedia />

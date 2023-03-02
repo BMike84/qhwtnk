@@ -7,10 +7,12 @@ import { NavigationDots, QuoteBanner, SocialMedia, Copyright } from ".";
 const Meet = () => {
   return (
     <motion.section
+      id="meet"
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 3 }}
-      className="relative flex flex-col gap-5  text-white p-3 md:px-10"
+      className="relative flex flex-col gap-5 bg-gray-900 text-white py-10 px-8 md:px-14 scroll-mt-24"
     >
+      <h2 class="text-3xl font-bold mb-8 text-center">Meet The Team</h2>
       <div className="relative flex flex-col gap-3 items-end smXl:flex-row smXl:items-center md: justify-between md900:justify-evenly">
         <Image
           width={120}

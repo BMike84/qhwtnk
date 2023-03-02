@@ -13,6 +13,7 @@ import cosmicHealing from "@/assets/cosmicHealing.png";
 import bird from "@/assets/bird.png";
 import tenaMain from "@/assets/tenaMain.webp";
 import karenMain from "@/assets/karenMain.webp";
+import quotes from "@/assets/quotes.svg";
 
 export default {
   logo,
@@ -30,4 +31,5 @@ export default {
   bird,
   tenaMain,
   karenMain,
+  quotes,
 };

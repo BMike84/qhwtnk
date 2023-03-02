@@ -7,7 +7,7 @@ const ServiceCard = ({ products }) => {
   return (
     <div
       id="featureservices"
-      className="relative bg-[#F8F4EA] p-4 scroll-mt-32"
+      className="relative bg-[#F8F4EA] py-10 px-8 md:px-14 scroll-mt-24"
     >
       <SocialMedia />
       <NavigationDots />

@@ -20,27 +20,11 @@ const Home = ({ products, bannerData, testimonialsData, blogPostData }) => {
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <ServiceCard products={products} />
-      <div id="meet" className="bg-gray-900 text-white pt-8 scroll-mt-32">
-        <h2 className="text-center text-2xl md900:text-3xl font-bold">
-          Meet The Team
-        </h2>
-        <Meet />
-      </div>
-
+      <Meet />
       <BlogCard posts={blogPostData} />
       <YouTubeBook />
-      <div
-        id="testimonialsSection"
-        className="relative bg-[#F8F4EA] p-10 scroll-mt-32"
-      >
-        <SocialMedia />
-        <NavigationDots />
-        <Copyright />
-        <h2 className="text-3xl font-bold text-center">
-          What People Are Saying!
-        </h2>
-        <TestimonialsCard testimonial={testimonialsData} />
-      </div>
+      <TestimonialsCard testimonials={testimonialsData} />
+
       <div>
         <Contact />
       </div>

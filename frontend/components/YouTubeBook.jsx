@@ -9,7 +9,7 @@ const YouTubeBook = () => {
   return (
     <div
       id="youtubeBook"
-      className="relative flex flex-col items-center md:items-start md:flex-row justify-center gap-14 bg-gray-900 p-8 text-white scroll-mt-32"
+      className="relative flex flex-col items-center md:items-start md:flex-row justify-center gap-14 bg-gray-900 text-white py-10 px-8 md:px-14 scroll-mt-24"
     >
       <Image
         width={200}

@@ -1,92 +1,82 @@
-import React, { useState, useEffect } from "react";
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import React from "react";
 import { urlFor } from "@/lib/client";
 import Image from "next/image";
 import images from "@/constants/images";
 import { motion } from "framer-motion";
-
 import { Copyright, NavigationDots, SocialMedia } from ".";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-const TestimonialsCard = ({ testimonial }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [testimonials, setTestimonials] = useState([]);
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
-  const handleClick = (index) => {
-    setCurrentIndex(index);
-  };
-
-  useEffect(() => {
-    setTestimonials(testimonial);
-  }, []);
-
+const TestimonialsCard = ({ testimonials }) => {
   return (
-    <>
-      <div className="antialiased flex flex-col items-center justify-center mt-6">
-        {testimonials.length && (
-          <>
-            {/* Cards */}
-            <motion.div
-              whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-              transition={{ duration: 1 }}
-              className="relative flex flex-col md:w-[80%] lg:w-[100%] min-h-[270px]text-gray-700  md:p-6 rounded-lg "
-            >
-              <Image
-                width={300}
-                height={300}
-                src={images.heart}
-                className="absolute top-8 right-0 md:top-4 md:right-4 z-0 opacity-30"
-              />
-              <div className="flex justify-start space-x-4 items-center z-10">
-                <img
-                  src={urlFor(testimonials[currentIndex].imgurl)}
-                  alt="quotation marks"
-                  className="h-10 w-10 mt-2"
-                />
-                <div>
-                  <h3 className=" font-bold text-2xl text-grey-500 justify-center">
-                    {testimonials[currentIndex].name}
-                  </h3>
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <p className="relative mt-6 font-bold text-xl text-center z-10">
-                  {testimonials[currentIndex].feedback}
-                </p>
-              </div>
-            </motion.div>
-            {/* Arrows for slide */}
-            <div className="flex gap-3 mt-1 app__testimonial-btns app__flex">
-              <div
-                onClick={() =>
-                  handleClick(
-                    currentIndex === 0
-                      ? testimonials.length - 1
-                      : currentIndex - 1
-                  )
-                }
-              >
-                <HiChevronLeft className="text-5xl border-2 border-black rounded-full" />
-              </div>
-
-              <div
-                onClick={() =>
-                  handleClick(
-                    currentIndex === testimonials.length - 1
-                      ? 0
-                      : currentIndex + 1
-                  )
-                }
-              >
-                <HiChevronRight className="text-5xl border-2 border-black rounded-full" />
-              </div>
+    <motion.section
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+      id="testimonialsSection"
+      class="flex flex-col items-center  text-gray-900 text-center relative bg-[#F8F4EA] py-10 px-8 md:px-14 scroll-mt-24"
+    >
+      <Image
+        width={200}
+        height={200}
+        src={images.heart}
+        className="absolute top-32 right-0 md:right-4 z-0 opacity-30"
+      />
+      <NavigationDots />
+      <SocialMedia />
+      <Copyright />
+      <h2 class="text-3xl font-bold mb-8 text-center">
+        What People Are Saying
+      </h2>
+      <Carousel
+        swipeable={true}
+        draggable={true}
+        showDots={true}
+        responsive={responsive}
+        ssr={true} // means to render carousel on server-side.
+        infinite={true}
+        autoPlaySpeed={500}
+        keyBoardControl={true}
+        customTransition="all .5"
+        transitionDuration={20}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+        className="w-full lg:w-4/5 mb-8"
+      >
+        {testimonials.map((testimonial) => (
+          <div className="flex flex-col gap-2 items-center h-auto justify-evenly mb-8">
+            <div className="flex justify-center gap-4 items-center">
+              <Image src={images.quotations} width={50} height={50} />
+              <p className="text-lg md:text-2xl font-bold pb-2">
+                {testimonial.name}
+              </p>
             </div>
-            <button className="mt-9 mb-14 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
-              View More
-            </button>
-          </>
-        )}
-      </div>
-    </>
+            <p className="text-gray-600 text-sm md:text-lg lg:text-xl font-semibold w-[95%] lg::w-3/4">
+              {testimonial.feedback}
+            </p>
+          </div>
+        ))}
+      </Carousel>
+      <button className="px-8 py-1.5 mb-14 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
+        View All
+      </button>
+    </motion.section>
   );
 };
 

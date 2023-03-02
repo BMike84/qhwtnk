@@ -48,7 +48,9 @@ const Navbar = () => {
     }
   };
 
-  window.addEventListener("scroll", changeColor);
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+  });
 
   return (
     <nav
