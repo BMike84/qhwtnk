@@ -28,9 +28,10 @@ const TestimonialsCard = ({ testimonials }) => {
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 1 }}
       id="testimonialsSection"
-      class="flex flex-col items-center  text-gray-900 text-center relative bg-[#F8F4EA] py-10 px-8 md:px-14 scroll-mt-24"
+      className="flex flex-col items-center  text-gray-900 text-center relative bg-[#F8F4EA] py-10 px-8 md:px-14 scroll-mt-24"
     >
       <Image
+        alt="heart"
         width={200}
         height={200}
         src={images.heart}
@@ -39,7 +40,7 @@ const TestimonialsCard = ({ testimonials }) => {
       <NavigationDots />
       <SocialMedia />
       <Copyright />
-      <h2 class="text-3xl font-bold mb-8 text-center">
+      <h2 className="text-3xl font-bold mb-8 text-center">
         What People Are Saying
       </h2>
       <Carousel
@@ -59,10 +60,18 @@ const TestimonialsCard = ({ testimonials }) => {
         itemClass="carousel-item-padding-40-px"
         className="w-full lg:w-4/5 mb-8"
       >
-        {testimonials.map((testimonial) => (
-          <div className="flex flex-col gap-2 items-center h-auto justify-evenly mb-8">
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className="flex flex-col gap-2 items-center h-auto justify-evenly mb-8"
+          >
             <div className="flex justify-center gap-4 items-center">
-              <Image src={images.quotations} width={50} height={50} />
+              <Image
+                src={images.quotations}
+                width={50}
+                height={50}
+                alt="Quotation marks"
+              />
               <p className="text-lg md:text-2xl font-bold pb-2">
                 {testimonial.name}
               </p>

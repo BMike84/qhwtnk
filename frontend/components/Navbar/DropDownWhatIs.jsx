@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 
@@ -6,34 +6,23 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const servicesLinks = [
+const whatLinks = [
   {
-    title: "BEYOND QUANTUM HEALING (BQH)",
-    link: "/#bqh",
+    title: "What Is BQH?",
+    link: "/#w?bqh",
   },
   {
-    title: "REMOTE SPIRIT RELEASE (RSR)",
-    link: "/#rsr",
-  },
-  {
-    title: "MENTORSHIP & EMPOWERMENT PACKAGES",
-    link: "/#mentorship",
-  },
-  {
-    title: "COVIDx CLEARING",
-    link: "/#covidclearing",
-  },
-  {
-    title: "All",
-    link: "/#featureservices",
+    title: "What Is RSR",
+    link: "/#w?rsr",
   },
 ];
 
-const DropDownServices = () => {
+const DropDownWhatIs = ({ close }) => {
   return (
-    <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button>Services</Menu.Button>
+    <Menu as="div" className="relative inline-block text-left z-60">
+      <Menu.Button>What Is?</Menu.Button>
       <Transition
+        as={Fragment}
         enter="transition ease-out duration-100"
         enterFrom="transform opacity-0 scale-95"
         enterTo="transform opacity-100 scale-100"
@@ -43,10 +32,11 @@ const DropDownServices = () => {
       >
         <Menu.Items className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white divide-y divide-gray-100 focus:outline-none">
           <div className="py-1">
-            {servicesLinks.map((item, index) => (
+            {whatLinks.map((item, index) => (
               <Menu.Item key={index}>
                 {({ active }) => (
                   <Link
+                    onClick={close}
                     href={item.link}
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
@@ -65,4 +55,4 @@ const DropDownServices = () => {
   );
 };
 
-export default DropDownServices;
+export default DropDownWhatIs;

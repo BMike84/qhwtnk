@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar/Navbar";
 
 const Layout = ({ children }) => {
   return (
@@ -8,10 +8,10 @@ const Layout = ({ children }) => {
       <Head>
         <title>QHWTNK</title>
       </Head>
-      <header>
+      <header className="font-[Poppins]">
         <Navbar />
       </header>
-      <main className="scroll-smooth">{children}</main>
+      <main className="scroll-smooth font-[Poppins]">{children}</main>
     </>
   );
 };

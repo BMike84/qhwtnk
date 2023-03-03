@@ -5,43 +5,23 @@ import { images } from "@/constants/index";
 import { motion } from "framer-motion";
 import { IoMdHeartDislike } from "react-icons/io";
 import { FaHandHoldingHeart } from "react-icons/fa";
-import { DropDownServices, DropDownWhatIs } from ".";
+import { DropDownServices, DropDownWhatIs } from "..";
 
-const navLinks = [
-  {
-    link: "#home",
-    title: "Home",
-  },
-  {
-    link: "/#featureservices",
-    title: "Services",
-  },
-  {
-    link: "/#featureblog",
-    title: "Blog",
-  },
-  {
-    link: "/#whatis",
-    title: "What Is?",
-  },
-  {
-    link: "/#contact",
-    title: "Contact",
-  },
-
-  {
-    link: "/#book",
-    title: "Book Now",
-  },
-];
+import navLinks from "./menuLinks";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-
+  //change colors on scroll
   const [navColor, setNavColor] = useState(false);
   const [logoColor, setLogoColor] = useState(false);
   const [buttonColor, setButtonColor] = useState(false);
 
+  //pass to dropdown on mobile meny
+  const toggleOnClick = () => {
+    setToggle(false);
+  };
+
+  //changes colors on scroll
   const changeColor = () => {
     if (window.scrollY >= 100) {
       setNavColor(true);
@@ -86,7 +66,7 @@ const Navbar = () => {
         </Link>
       </div>
       <ul className="hidden flex-1 justify-center items-center gap-5 md:flex">
-        {navLinks.map((item) =>
+        {navLinks.map((item, index) =>
           item.title === "Book Now" ? (
             <li key={`link-${item.title}`}>
               <Link className="hidden" href={item.link}>
@@ -94,9 +74,9 @@ const Navbar = () => {
               </Link>
             </li>
           ) : item.title === "Services" ? (
-            <DropDownServices />
+            <DropDownServices key={index + 2} />
           ) : item.title === "What Is?" ? (
-            <DropDownWhatIs />
+            <DropDownWhatIs key={index + 7} />
           ) : (
             <li key={`link-${item.title}`}>
               <Link
@@ -132,12 +112,12 @@ const Navbar = () => {
               className="fixed top-0 right-0 bottom-0 z-[5] p-4 w-[80%] h-screen flex justify-end items-end flex-col bg-black text-white"
             >
               <IoMdHeartDislike onClick={() => setToggle(false)} />
-              <ul className="h-full w-full">
+              <ul className="relative h-full w-full flex flex-col items-left">
                 {navLinks.map((item, index) =>
                   item.title === "Services" ? (
-                    <DropDownServices />
+                    <DropDownServices key={index + 5} close={toggleOnClick} />
                   ) : item.title === "What Is?" ? (
-                    <DropDownWhatIs />
+                    <DropDownWhatIs key={index} close={toggleOnClick} />
                   ) : (
                     <li className="py-8" key={`link-${item.title}`}>
                       <Link
@@ -150,6 +130,12 @@ const Navbar = () => {
                     </li>
                   )
                 )}
+                <Link
+                  href="/"
+                  className="absolute top-80 mt-10  border-2 z-10 px-3 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
+                >
+                  Book Now
+                </Link>
               </ul>
             </motion.div>
           </>

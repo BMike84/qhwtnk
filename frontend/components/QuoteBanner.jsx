@@ -11,6 +11,7 @@ const QuoteBanner = ({ ref, animate }) => {
       className="relative flex flex-col justify-evenly items-center text-center  w-[100%] min-h-[250px] bg-gray-900 text-white mb-16"
     >
       <Image
+        alt="heart"
         width={200}
         height={200}
         src={images.heart}
@@ -24,6 +25,7 @@ const QuoteBanner = ({ ref, animate }) => {
       </h3>
       <p className="text-lg">Tena M. Dodds</p>
       <Image
+        alt="heart"
         width={200}
         height={200}
         src={images.heart}

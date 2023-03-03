@@ -1,9 +1,8 @@
 export { default as BlogCard } from "./BlogCard";
 export { default as Contact } from "./Contact";
-export { default as Footer } from "./Footer";
 export { default as HeroBanner } from "./HeroBanner";
 export { default as Layout } from "./Layout";
-export { default as Navbar } from "./Navbar";
+export { default as Navbar } from "./Navbar/Navbar";
 export { default as ServiceCard } from "./ServiceCard";
 export { default as QuoteBanner } from "./QuoteBanner";
 export { default as TestimonialsCard } from "./TestimonialsCard";
@@ -12,5 +11,5 @@ export { default as Meet } from "./Meet";
 export { default as NavigationDots } from "./NavigationDots";
 export { default as SocialMedia } from "./SocialMedia";
 export { default as Copyright } from "./Copyright";
-export { default as DropDownServices } from "./DropDownServices";
-export { default as DropDownWhatIs } from "./DropDownWhatIs";
+export { default as DropDownServices } from "./Navbar/DropDownServices";
+export { default as DropDownWhatIs } from "./Navbar/DropDownWhatIs";

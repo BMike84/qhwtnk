@@ -6,21 +6,33 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const whatLinks = [
+const servicesLinks = [
   {
-    title: "What Is BQH?",
-    link: "/#w?bqh",
+    title: "BEYOND QUANTUM HEALING (BQH)",
+    link: "/#bqh",
   },
   {
-    title: "What Is RSR",
-    link: "/#w?rsr",
+    title: "REMOTE SPIRIT RELEASE (RSR)",
+    link: "/#rsr",
+  },
+  {
+    title: "MENTORSHIP & EMPOWERMENT PACKAGES",
+    link: "/#mentorship",
+  },
+  {
+    title: "COVIDx CLEARING",
+    link: "/#covidclearing",
+  },
+  {
+    title: "All",
+    link: "/#featureservices",
   },
 ];
 
-const DropDownWhatIs = () => {
+const DropDownServices = ({ close }) => {
   return (
-    <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button>What Is?</Menu.Button>
+    <Menu as="div" className="relative inline-block text-left z-50">
+      <Menu.Button>Services</Menu.Button>
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
@@ -32,11 +44,12 @@ const DropDownWhatIs = () => {
       >
         <Menu.Items className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white divide-y divide-gray-100 focus:outline-none">
           <div className="py-1">
-            {whatLinks.map((item, index) => (
+            {servicesLinks.map((item, index) => (
               <Menu.Item key={index}>
                 {({ active }) => (
                   <Link
-                    href=""
+                    onClick={close}
+                    href={item.link}
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm"
@@ -54,4 +67,4 @@ const DropDownWhatIs = () => {
   );
 };
 
-export default DropDownWhatIs;
+export default DropDownServices;

@@ -12,12 +12,14 @@ const YouTubeBook = () => {
       className="relative flex flex-col items-center md:items-start md:flex-row justify-center gap-14 bg-gray-900 text-white py-10 px-8 md:px-14 scroll-mt-24"
     >
       <Image
+        alt="birds flying from hand"
         width={200}
         height={200}
         src={images.bird}
         className="hidden mdSm:absolute bottom-0 left-3 mdSm:bottom-52 mdSm:w-[160px]  md:hidden lg:block  lg:top-8 lg:left-6 z-0 opacity-30"
       />
       <Image
+        alt="cosmic praying symbol"
         width={200}
         height={200}
         src={images.cosmicHealing}
@@ -34,9 +36,8 @@ const YouTubeBook = () => {
         <iframe
           src="https://www.youtube.com/embed/OMVYKAxLeRI"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
           className="mb-6 w-[280px] h-[160px] mdSm:w-[340px] mdSm:h-[180px] md:w-[400px] md:h-[210px] lg:w-[500px] lg:h-[280px]"
         />
         <button className="px-4 py-2 md:px-8 md:py-2 border-2 border-white h font-bold text-white uppercase hover:bg-white hover:text-black ease-in duration-200">
@@ -51,6 +52,7 @@ const YouTubeBook = () => {
         <p className="text-center mb-6 font-bold text-lg">Our Book</p>
         <Link href="https://www.balboapress.com/en/bookstore/bookdetails/720450-loveyourself">
           <Image
+            alt="Karens Book"
             width={160}
             src={images.book}
             className="mdSm:w-[180px] hover:scale-105 ease-in duration-300 md:w-[180px] lg:w-[200px]"

@@ -23,8 +23,11 @@ const socialLinks = [
 const SocialMedia = () => {
   return (
     <div className="absolute bottom-1 left-1 flex gap-1 smXl:gap-3 justify-end items-start p-4">
-      {socialLinks.map((item) => (
-        <div className="flex justify-center items-center w-[35px] h-[35px] md:w-[50px] md:h-[50px] rounded-full bg-gray-200 my-1 transition-all ease-in-out duration-300 hover:bg-gray-400">
+      {socialLinks.map((item, index) => (
+        <div
+          className="flex justify-center items-center w-[35px] h-[35px] md:w-[50px] md:h-[50px] rounded-full bg-gray-200 my-1 transition-all ease-in-out duration-300 hover:bg-gray-400"
+          key={index}
+        >
           <Link href={item.link} target="blank" className="w-8">
             {item.icon}
           </Link>
