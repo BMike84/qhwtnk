@@ -4,19 +4,19 @@ const navLinks = [
     title: "Home",
   },
   {
-    link: "/#featureservices",
+    link: "#featureservices",
     title: "Services",
   },
   {
-    link: "/#featureblog",
+    link: "#featureblog",
     title: "Blog",
   },
   {
-    link: "/#whatis",
+    link: "#whatis",
     title: "What Is?",
   },
   {
-    link: "/#contact",
+    link: "#contact",
     title: "Contact",
   },
 ];
