@@ -40,8 +40,8 @@ const YouTubeBook = () => {
           allowFullScreen
           className="mb-6 w-[280px] h-[160px] mdSm:w-[340px] mdSm:h-[180px] md:w-[400px] md:h-[210px] lg:w-[500px] lg:h-[280px]"
         />
-        <button className="px-4 py-2 md:px-8 md:py-2 border-2 border-white h font-bold text-white uppercase hover:bg-white hover:text-black ease-in duration-200">
-          Youtube Page
+        <button className="px-4 py-2 md:px-6 md:py-2 border-2 border-white h font-bold text-white uppercase hover:bg-white hover:text-black ease-in duration-200">
+          Youtube
         </button>
       </motion.div>
       <motion.div

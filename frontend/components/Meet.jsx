@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { images } from "@/constants";
 import { motion } from "framer-motion";
 import { NavigationDots, QuoteBanner, SocialMedia, Copyright } from ".";
@@ -80,6 +81,14 @@ const Meet = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center mt-10">
+        <Link
+          href="/"
+          className=" px-8 py-2 border-2 border-white h font-bold text-white uppercase hover:bg-white hover:text-black ease-in duration-200"
+        >
+          About Us
+        </Link>
       </div>
       <QuoteBanner />
       <NavigationDots />

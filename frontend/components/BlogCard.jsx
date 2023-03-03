@@ -25,10 +25,10 @@ const BlogCard = ({ posts }) => {
           {posts.map((post) => (
             <div
               key={post._id}
-              className="md:w-[100%] border-2 pb-4 rounded-lg bg-white"
+              className="md:w-[100%] border-3 pb-4 shadow-xl rounded-xl bg-white"
             >
               <Link href="" className="group">
-                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden  bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 mb-4">
+                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden  bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 mb-4 rounded-t-xl">
                   <img
                     src={urlFor(post.mainImage)}
                     alt={post.title}
@@ -36,19 +36,27 @@ const BlogCard = ({ posts }) => {
                   />
                 </div>
                 <div className="flex flex-col justify-between h-[100px]">
-                  <h2 className=" text-base md:text-xl font-bold text-center px-2">
+                  <h2 className=" text-base md:text-base lg:text-lg font-bold text-center px-2">
                     {post.title}
                   </h2>
-                  <div className="flex items-end justify-evenly font-medium text-sm   md:text-lg  text-gray-900">
+                  <div className="flex items-end justify-evenly  text-sm   md:text-base lg:text-lg text-gray-600 font-semibold">
                     <p>{post.username}</p>
                     <p>{new Date(post.publishedAt).toDateString()}</p>
                   </div>
+                </div>
+                <div className="flex justify-center">
+                  <Link
+                    href="/"
+                    className="mt-6 text-white bg-gray-900 hover:bg-gray-700 font-semibold rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+                  >
+                    Read More
+                  </Link>
                 </div>
               </Link>
             </div>
           ))}
         </div>
-        <button className="mt-3 mb-20 md:mb-5 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
+        <button className="mt-8 mb-20 md:mb-5 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
           View All
         </button>
       </motion.div>

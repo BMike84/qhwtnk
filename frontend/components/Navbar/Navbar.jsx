@@ -94,8 +94,8 @@ const Navbar = () => {
         href="/"
         className={
           buttonColor
-            ? "hidden md:block border-2  border-black z-10 px-3 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
-            : "hidden md:block border-2 z-10 px-3 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
+            ? "hidden md:block border-2  border-black z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
+            : "hidden md:block border-2 z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
         }
       >
         Book Now

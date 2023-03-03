@@ -3,7 +3,7 @@ import Image from "next/image";
 import { images } from "@/constants";
 import { motion } from "framer-motion";
 
-const QuoteBanner = ({ ref, animate }) => {
+const QuoteBanner = () => {
   return (
     <motion.div
       whileInView={{ opacity: [0, 1] }}
