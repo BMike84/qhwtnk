@@ -8,6 +8,10 @@ function classNames(...classes) {
 
 const servicesLinks = [
   {
+    title: "All Services",
+    link: "/#featureservices",
+  },
+  {
     title: "BEYOND QUANTUM HEALING (BQH)",
     link: "/#bqh",
   },
@@ -22,10 +26,6 @@ const servicesLinks = [
   {
     title: "COVIDx CLEARING",
     link: "/#covidclearing",
-  },
-  {
-    title: "All",
-    link: "/#featureservices",
   },
 ];
 
