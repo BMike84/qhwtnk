@@ -27,7 +27,7 @@ const BlogCard = ({ posts }) => {
               key={post._id}
               className="md:w-[100%] border-3 pb-4 shadow-xl rounded-xl bg-white"
             >
-              <Link href="" className="group">
+              <Link href="/" className="group">
                 <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden  bg-gray-200 xl:aspect-w-7 xl:aspect-h-8 mb-4 rounded-t-xl">
                   <img
                     src={urlFor(post.mainImage)}
@@ -45,12 +45,9 @@ const BlogCard = ({ posts }) => {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <Link
-                    href="/"
-                    className="mt-6 text-white bg-gray-900 hover:bg-gray-700 font-semibold rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
-                  >
+                  <button className="mt-6 text-white bg-gray-900 hover:bg-gray-700 font-semibold rounded-lg text-sm px-3 py-2 text-center inline-flex items-center">
                     Read More
-                  </Link>
+                  </button>
                 </div>
               </Link>
             </div>
