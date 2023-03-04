@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
+import { AiFillCaretDown } from "react-icons/ai";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -32,7 +33,10 @@ const servicesLinks = [
 const DropDownServices = ({ close }) => {
   return (
     <Menu as="div" className="relative inline-block text-left z-50">
-      <Menu.Button>Services</Menu.Button>
+      <Menu.Button className="flex items-center gap-1 hover:text-sky-500">
+        <span>Services</span>
+        <AiFillCaretDown />
+      </Menu.Button>
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
