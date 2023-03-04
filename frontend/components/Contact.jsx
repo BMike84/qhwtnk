@@ -1,34 +1,28 @@
-import React, { useState, useRef } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import images from "@/constants/images";
-import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { Copyright, NavigationDots, SocialMedia } from ".";
 
-const Contact = () => {
+function Contact() {
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
   const form = useRef();
 
-  const [formData, setFormData] = useState({
-    user_name: "",
-    user_email: "",
-    user_subject: "",
-    message: "",
-  });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { user_name, user_email, user_subject, message } = formData;
-
-  const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    setLoading(true);
-
-    e.preventDefault();
+  const sendEmail = (e, data) => {
+    // e.preventDefault();
 
     emailjs
       .sendForm(
@@ -47,6 +41,7 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+    reset();
   };
   return (
     <section
@@ -89,72 +84,82 @@ const Contact = () => {
           />
         </motion.div>
         {!isFormSubmitted ? (
-          <form ref={form} className="space-y-8 max-w-screen-md mx-auto px-4">
-            <div>
+          <form
+            onSubmit={handleSubmit(sendEmail)}
+            ref={form}
+            className="space-y-8 max-w-screen-md mx-auto px-4"
+          >
+            <div className="flex flex-col gap-2">
+              <label>Name</label>
               <input
                 type="text"
                 name="user_name"
-                id="name"
-                value={user_name}
-                onChange={handleChangeInput}
-                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light mb-7"
-                placeholder="Jane Doe"
-                required
+                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                placeholder="Enter Name"
+                {...register("user_name", { required: true })}
               />
-
+              {errors.user_name && (
+                <p className="text-red-500">Name is required.</p>
+              )}
+            </div>
+            <div className="flex flex-col gap-2">
+              <label>Email</label>
               <input
                 type="email"
                 name="user_email"
-                id="email"
-                value={user_email}
-                onChange={handleChangeInput}
+                placeholder="Enter your email"
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                placeholder="name@flowbite.com"
-                required
+                {...register("user_email", { required: true })}
               />
+              {errors.user_name && (
+                <p className="text-red-500">Email is required</p>
+              )}
             </div>
-            <div>
+            <div className="flex flex-col gap-2">
+              <label>Subject</label>
               <input
                 type="text"
                 name="user_subject"
-                id="subject"
-                value={user_subject}
-                onChange={handleChangeInput}
                 className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder="Let us know how we can help you"
-                required
+                {...register("user_subject", { required: true })}
               />
+              {errors.user_name && (
+                <p className="text-red-500">Subject is Required</p>
+              )}
             </div>
-            <div className="sm:col-span-2">
+            <div className="flex flex-col gap-2">
+              <label>Message</label>
               <textarea
                 id="message"
                 rows="6"
-                value={message}
+                placeholder="Enter your message"
                 name="message"
-                onChange={handleChangeInput}
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Leave a comment..."
+                {...register("message", { required: true })}
               ></textarea>
+              {errors.message && (
+                <p className="text-red-500">Please fill out this field.</p>
+              )}
             </div>
-            <div className="flex justify-center">
-              <button
-                type="button"
-                onClick={handleSubmit}
+            <div className="col-md-6 text-center text-md-left py-2 py-md-0">
+              <input
+                id="contact-btn"
                 className="px-8 py-2 border-2 border-white h font-bold text-white uppercase hover:bg-white hover:text-black ease-in duration-200"
-              >
-                {loading ? "Sending" : "Send Message"}
-              </button>
+                type="submit"
+                value="Submit Now"
+              />
             </div>
           </form>
         ) : (
-          <div className="text-gray-400 flex flex-col items-center text-2xl gap-2">
+          <div className="text-gray-200 flex flex-col items-center text-2xl gap-2">
             <h3>Thank you for getting in touch.</h3>
-            <h3>Give us 24 or 48 hours to get back to you.</h3>
+            <h3>Give us 24-48hrs to get back to you.</h3>
           </div>
         )}
       </div>
     </section>
   );
-};
+}
 
 export default Contact;
