@@ -20,7 +20,7 @@ const Meet = () => {
           width={120}
           height={200}
           src={images.bird}
-          className="absolute top-8 left-2 z-0 opacity-30 smXl:hidden"
+          className="absolute top-8 left-0 z-0 opacity-30 smXl:hidden"
         />
         <Image
           alt="Picture of Tena"
