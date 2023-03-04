@@ -149,7 +149,7 @@ const Contact = () => {
         ) : (
           <div className="text-gray-400 flex flex-col items-center text-2xl gap-2">
             <h3>Thank you for getting in touch.</h3>
-            <h3>We'll get back to you within 24hrs.</h3>
+            <h3>Give us 24 or 48 hours to get back to you.</h3>
           </div>
         )}
       </div>
