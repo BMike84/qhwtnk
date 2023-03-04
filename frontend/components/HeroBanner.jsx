@@ -6,10 +6,10 @@ const HeroBanner = ({ heroBanner }) => {
   return (
     <div
       id="home"
-      className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover custom-img"
+      className="relative flex items-center justify-center h-[620px] lg:h-screen  bg-center bg-cover custom-img"
     >
       <div className="absolute top-0 left-0 right-0 bottom-0  bg-black/70 z-[2]" />
-      <div className="p-5 text-white z-[2] flex justify-center  items-center flex-col w-full content-center">
+      <div className="p-5 text-white z-[2] flex lg:justify-center  lg:mb-0  lg:items-center flex-col w-full content-center lg:mt-10">
         <NavigationDots />
         <SocialMedia />
         <div className="flex justify-center">
