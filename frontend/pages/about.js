@@ -17,6 +17,7 @@ const about = () => {
               width={350}
               height={350}
               className="rounded-sm"
+              alt="Tena"
             />
             <div className="flex flex-col gap-2 text-center lg:text-left lg:w-[70%] lg:py-4">
               <p>
@@ -70,24 +71,28 @@ const about = () => {
               width={155}
               height={155}
               className="sm:hover:scale-150 ease-in duration-300"
+              alt="Certificate"
             />
             <Image
               src={images.tenaCert2}
               width={155}
               height={155}
               className="sm:hover:scale-150 ease-in duration-300"
+              alt="Certificate"
             />
             <Image
               src={images.RSRTena}
               width={155}
               height={155}
               className="sm:hover:scale-150 ease-in duration-300"
+              alt="Certificate"
             />
             <Image
               src={images.TenaPHM}
               width={155}
               height={155}
               className="sm:hover:scale-150 ease-in duration-300"
+              alt="Certificate"
             />
           </div>
         </div>
@@ -103,6 +108,7 @@ const about = () => {
               width={350}
               height={350}
               className="rounded-sm"
+              alt="Karen"
             />
             <div className="flex flex-col gap-2 text-center lg:text-left lg:w-[70%] lg:py-4">
               <p>
@@ -154,12 +160,14 @@ const about = () => {
               width={155}
               height={155}
               className="sm:hover:scale-150 ease-in duration-300"
+              alt="Certificate"
             />
             <Image
               src={images.KarenRSRCertificate}
               width={155}
               height={155}
               className="sm:hover:scale-150 ease-in duration-300"
+              alt="Certificate"
             />
           </div>
         </div>
