@@ -13,7 +13,7 @@ const about = () => {
         <div className=" flex flex-col gap-2 items-center text-sm lg:text-base">
           <div className="flex flex-col gap-2 items-center lg:flex-row w-full lg:justify-evenly ">
             <Image
-              src={images.tenaMain}
+              src={images.aboutTena}
               width={350}
               height={350}
               className="rounded-sm"
@@ -66,7 +66,7 @@ const about = () => {
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-            {/* <Image
+            <Image
               src={images.tenaCert1}
               width={155}
               height={155}
@@ -74,7 +74,7 @@ const about = () => {
               alt="Certificate"
             />
             <Image
-              src={images.tenaCert2}
+              src={images.TenaCert2}
               width={155}
               height={155}
               className="sm:hover:scale-150 ease-in duration-300"
@@ -93,7 +93,7 @@ const about = () => {
               height={155}
               className="sm:hover:scale-150 ease-in duration-300"
               alt="Certificate"
-            /> */}
+            />
           </div>
         </div>
       </div>

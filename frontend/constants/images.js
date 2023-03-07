@@ -20,6 +20,8 @@ import KarenRSRCertificate from "@/assets/KarenRSRCertificate.webp";
 import RSRTena from "@/assets/RSRTena.webp";
 import tenaCert1 from "@/assets/tenaCert1.jpg";
 import TenaPHM from "@/assets/TenaPHM.webp";
+import aboutTena from "@/assets/AboutTena.jpg";
+import TenaCert2 from "@/assets/TenaCert2.jpg";
 
 export default {
   logo,
@@ -44,4 +46,6 @@ export default {
   RSRTena,
   tenaCert1,
   TenaPHM,
+  aboutTena,
+  TenaCert2,
 };
