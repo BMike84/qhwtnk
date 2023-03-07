@@ -65,33 +65,33 @@ const about = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+          <div className="flex flex-wrap justify-center gap-1 md:gap-4">
             <Image
               src={images.tenaCert1}
-              width={155}
-              height={155}
-              className="sm:hover:scale-150 ease-in duration-300"
+              width={130}
+              height={130}
+              className="hover:scale-[2] md:hover:scale-[2.5]] ease-in duration-300"
               alt="Certificate"
             />
             <Image
               src={images.TenaCert2}
-              width={155}
-              height={155}
-              className="sm:hover:scale-150 ease-in duration-300"
+              width={130}
+              height={130}
+              className="hover:scale-[2] md:hover:scale-[2.5] ease-in duration-300"
               alt="Certificate"
             />
             <Image
               src={images.RSRTena}
-              width={155}
-              height={155}
-              className="sm:hover:scale-150 ease-in duration-300"
+              width={130}
+              height={130}
+              className="hover:scale-[2] md:hover:scale-[2.5] ease-in duration-300"
               alt="Certificate"
             />
             <Image
               src={images.TenaPHM}
-              width={155}
-              height={155}
-              className="sm:hover:scale-150 ease-in duration-300"
+              width={130}
+              height={130}
+              className="hover:scale-[2] md:hover:scale-[2.5] ease-in duration-300"
               alt="Certificate"
             />
           </div>
@@ -154,19 +154,19 @@ const about = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap gap-2 md:gap-4">
+          <div className="flex flex-wrap justify-center gap-1 md:gap-4">
             <Image
               src={images.KarenCert1}
-              width={155}
-              height={155}
-              className="sm:hover:scale-150 ease-in duration-300"
+              width={130}
+              height={130}
+              className="hover:scale-[2] md:hover:scale-[2.5] ease-in duration-300"
               alt="Certificate"
             />
             <Image
               src={images.KarenRSRCertificate}
-              width={155}
-              height={155}
-              className="sm:hover:scale-150 ease-in duration-300"
+              width={130}
+              height={130}
+              className="hover:scale-[2] md:hover:scale-[2.5] ease-in duration-300"
               alt="Certificate"
             />
           </div>
