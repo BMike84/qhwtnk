@@ -84,7 +84,7 @@ const Meet = () => {
       </div>
       <div className="flex justify-center mt-10">
         <Link
-          href="/"
+          href="/about"
           className=" px-8 py-2 border-2 border-white h font-bold text-white uppercase hover:bg-white hover:text-black ease-in duration-200"
         >
           About Us

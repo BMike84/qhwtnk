@@ -14,6 +14,14 @@ import bird from "@/assets/bird.png";
 import tenaMain from "@/assets/tenaMain.webp";
 import karenMain from "@/assets/karenMain.webp";
 import quotes from "@/assets/quotes.svg";
+import aboutKaren from "@/assets/aboutKaren.webp";
+import aboutTena from "@/assets/aboutTena.webp";
+import KarenCert1 from "@/assets/KarenCert1.webp";
+import KarenRSRCertificate from "@/assets/KarenRSRCertificate.webp";
+import RSRTena from "@/assets/RSRTena.webp";
+import tenaCert1 from "@/assets/tenaCert1.jpg";
+import tenaCert2 from "@/assets/tenaCert2.webp";
+import TenaPHM from "@/assets/TenaPHM.webp";
 
 export default {
   logo,
@@ -32,4 +40,12 @@ export default {
   tenaMain,
   karenMain,
   quotes,
+  aboutKaren,
+  aboutTena,
+  KarenCert1,
+  KarenRSRCertificate,
+  RSRTena,
+  tenaCert1,
+  tenaCert2,
+  TenaPHM,
 };
