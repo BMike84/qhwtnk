@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { images } from "@/constants";
+import { images } from "@/constants/index";
 import { Copyright, SocialMedia } from "@/components";
 
 const about = () => {
