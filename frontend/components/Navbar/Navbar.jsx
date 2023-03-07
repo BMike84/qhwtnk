@@ -23,7 +23,7 @@ const Navbar = () => {
 
   //changes colors on scroll
   const changeColor = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 50) {
       setNavColor(true);
       setLogoColor(true);
       setButtonColor(true);
@@ -65,11 +65,16 @@ const Navbar = () => {
           )}
         </Link>
       </div>
-      <ul className="hidden flex-1 justify-center items-center gap-5 md:flex">
+      <ul className="hidden flex-1 justify-center items-center gap-5 md:flex md:text-sm lg:text-base">
+        <li>
+          <Link href="/" className="hover:text-sky-500">
+            Home
+          </Link>
+        </li>
         {navLinks.map((item, index) =>
           item.title === "Book Now" ? (
             <li key={`link-${item.title}`}>
-              <Link className="hidden" href={item.link}>
+              <Link className="hidden" href={item.link} scroll={true}>
                 {item.title}
               </Link>
             </li>
@@ -94,8 +99,8 @@ const Navbar = () => {
         href="/"
         className={
           buttonColor
-            ? "hidden md:block border-2  border-black z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
-            : "hidden md:block border-2 z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
+            ? "hidden md:block md:text-xs lg:text-sm border-2  border-black z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
+            : "hidden md:block md:text-xs lg:text-sm border-2 z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
         }
       >
         Book Now
@@ -113,6 +118,11 @@ const Navbar = () => {
             >
               <IoMdHeartDislike onClick={() => setToggle(false)} />
               <ul className="relative h-full w-full flex flex-col items-left">
+                <li className="mb-8">
+                  <Link href="/" onClick={() => setToggle(false)}>
+                    Home
+                  </Link>
+                </li>
                 {navLinks.map((item, index) =>
                   item.title === "Services" ? (
                     <DropDownServices key={index + 5} close={toggleOnClick} />
