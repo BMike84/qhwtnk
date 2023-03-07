@@ -1,18 +1,18 @@
 const navLinks = [
   {
-    link: "#featureservices",
+    link: "/#featureservices",
     title: "Services",
   },
   {
-    link: "#featureblog",
+    link: "/blog",
     title: "Blog",
   },
   {
-    link: "#whatis",
+    link: "/what-is-bqh",
     title: "What Is?",
   },
   {
-    link: "#contact",
+    link: "/#contact",
     title: "Contact",
   },
 ];
