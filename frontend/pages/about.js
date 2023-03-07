@@ -13,7 +13,7 @@ const about = () => {
         <div className=" flex flex-col gap-2 items-center text-sm lg:text-base">
           <div className="flex flex-col gap-2 items-center lg:flex-row w-full lg:justify-evenly ">
             <Image
-              src={images.aboutTena}
+              src={images.tenaMain}
               width={350}
               height={350}
               className="rounded-sm"
