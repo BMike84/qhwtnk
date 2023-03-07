@@ -66,7 +66,7 @@ const about = () => {
             </div>
           </div>
           <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-            <Image
+            {/* <Image
               src={images.tenaCert1}
               width={155}
               height={155}
@@ -93,7 +93,7 @@ const about = () => {
               height={155}
               className="sm:hover:scale-150 ease-in duration-300"
               alt="Certificate"
-            />
+            /> */}
           </div>
         </div>
       </div>
