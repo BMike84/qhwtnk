@@ -8,7 +8,7 @@ const navLinks = [
     title: "Blog",
   },
   {
-    link: "/what-is-bqh",
+    link: "/what-is",
     title: "What Is?",
   },
   {

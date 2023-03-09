@@ -1,12 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import Nav from "./Nav";
+import { Copyright, SocialMedia } from "@/components";
 
 const WBQH = () => {
   return (
     <section className=" bg-gray-900 h-screen py-28">
       <div className="relative flex flex-col gap-2 items-center bg-[#F8F4EA] py-12 px-8">
         <Nav />
+        <SocialMedia />
+        <Copyright />
         <h2 className="mt-6 text-base md:text-2xl font-bold text-center">
           WHAT IS BEYOND QUANTUM HEALING?
         </h2>
@@ -151,7 +154,10 @@ const WBQH = () => {
             </div>
           </div>
         </div>
-        <Link href="" className="mt-6 font-bold text-xs md:text-lg">
+        <Link
+          href="/whatBqh/sessions"
+          className="mt-6 mb-12 font-bold text-xs md:text-lg"
+        >
           Read Next: Session Parts and Hypnosis
         </Link>
       </div>
