@@ -7,14 +7,16 @@ import { Copyright, SocialMedia } from "@/components";
 const Session = () => {
   return (
     <section className=" bg-gray-900 h-screen py-28">
-      <div className="relative flex flex-col gap-2 bg-[#F8F4EA] py-12 px-8">
+      <div className="relative flex flex-col gap-2 items-center bg-[#F8F4EA] py-12 px-8">
         <Nav />
         <SocialMedia />
         <Copyright />
         <h2 className="mt-6 text-base md:text-2xl font-bold text-center">
           SESSIONS PARTS
         </h2>
-        <p>Sessions can run from 4-6 hours including the pre-talk. </p>
+        <p className="text-center">
+          Sessions can run from 4-6 hours including the pre-talk.{" "}
+        </p>
         <div className="flex flex-col items-center gap-3">
           {sessionData.data1.map((data, index) => (
             <div key={index}>

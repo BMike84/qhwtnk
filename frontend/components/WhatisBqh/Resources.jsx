@@ -6,7 +6,7 @@ import { Copyright, SocialMedia } from "@/components";
 const Resources = () => {
   return (
     <section className=" bg-gray-900 h-screen py-28">
-      <div className=" relative flex flex-col gap-4 bg-[#F8F4EA] py-12 px-8 items-center">
+      <div className=" relative flex flex-col gap-4 bg-[#F8F4EA] py-12 px-8 items-center text-center">
         <Nav />
         <SocialMedia />
         <Copyright />
@@ -32,7 +32,7 @@ const Resources = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center text-center gap-2">
           <h2 className="font-semibold">
             For Clients with a Strong Conscious Mind
           </h2>

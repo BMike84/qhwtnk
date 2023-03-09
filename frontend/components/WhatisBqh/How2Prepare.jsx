@@ -9,7 +9,7 @@ import { Copyright, SocialMedia } from "@/components";
 const How2Prepare = () => {
   return (
     <section className=" bg-gray-900 h-screen py-28">
-      <div className="relative flex flex-col gap-2 bg-[#F8F4EA] py-12 px-8">
+      <div className="relative flex flex-col gap-2 items-center bg-[#F8F4EA] py-12 px-8">
         <Nav />
         <SocialMedia />
         <Copyright />
