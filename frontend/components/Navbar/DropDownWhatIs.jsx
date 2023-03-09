@@ -10,7 +10,7 @@ function classNames(...classes) {
 const whatLinks = [
   {
     title: "What Is BQH?",
-    link: "/what-is-bqh",
+    link: "/whatBqh/what-is",
   },
   {
     title: "What Is RSR",

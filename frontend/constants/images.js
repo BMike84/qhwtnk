@@ -22,6 +22,7 @@ import tenaCert1 from "@/assets/tenaCert1.jpg";
 import TenaPHM from "@/assets/TenaPHM.webp";
 import aboutTena from "@/assets/AboutTena.jpg";
 import TenaCert2 from "@/assets/TenaCert2.jpg";
+import bqhbird from "@/assets/bqhbird.webp";
 
 export default {
   logo,
@@ -48,4 +49,5 @@ export default {
   TenaPHM,
   aboutTena,
   TenaCert2,
+  bqhbird,
 };
