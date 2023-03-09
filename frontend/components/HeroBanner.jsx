@@ -1,6 +1,7 @@
 import React from "react";
 import { urlFor } from "@/lib/client";
 import { NavigationDots, SocialMedia } from ".";
+import Link from "next/link";
 
 const HeroBanner = ({ heroBanner }) => {
   return (
@@ -29,9 +30,13 @@ const HeroBanner = ({ heroBanner }) => {
           <button className="px-8 py-2 border hover:bg-white hover:text-black ease-in-out duration-300">
             {heroBanner.buttonText1}
           </button>
-          <button className="px-8 py-2 border hover:bg-white hover:text-black  ease-in-out duration-300">
+          <Link
+            href="#contact"
+            scroll={false}
+            className="px-8 py-2 border hover:bg-white hover:text-black  ease-in-out duration-300"
+          >
             {heroBanner.buttonText2}
-          </button>
+          </Link>
         </div>
       </div>
     </div>
