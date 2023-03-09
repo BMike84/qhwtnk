@@ -91,7 +91,7 @@ const Session = () => {
           ))}
         </div>
         <Link
-          href="/whatBqh/prepare"
+          href="/whatIs/prepare"
           className="mt-6 mb-12 font-bold text-xs md:text-lg"
         >
           Read Next: How to prepare for your BQH Session

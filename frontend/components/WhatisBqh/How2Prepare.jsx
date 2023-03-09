@@ -64,7 +64,7 @@ const How2Prepare = () => {
         </div>
 
         <Link
-          href="/whatBqh/resources"
+          href="/whatIs/resources"
           className="mt-6 mb-12 font-bold text-xs md:text-lg"
         >
           For more RESOURCES to prepare for your session click here.
