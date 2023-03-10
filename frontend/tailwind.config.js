@@ -8,7 +8,7 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("@tailwindcss/line-clamp")],
   theme: {
     extend: {
       screens: {

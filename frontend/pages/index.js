@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   ServiceCard,
-  BlogCard,
+  FeatureBlog,
+  // BlogCard,
   Contact,
   HeroBanner,
   TestimonialsCard,
@@ -18,7 +19,7 @@ const Home = ({ products, bannerData, testimonialsData, blogPostData }) => {
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <ServiceCard products={products} />
       <Meet />
-      <BlogCard posts={blogPostData} />
+      <FeatureBlog posts={blogPostData} />
       <YouTubeBook />
       <TestimonialsCard testimonials={testimonialsData} />
 
@@ -42,6 +43,7 @@ export const getServerSideProps = async () => {
   const blogPost = groq`*[_type == "post"] {
    _id,
    title,
+   shortDesc,
    "username": author->name,
    "categories": categories[]->{id, title},
    "authorImage": author->image,
@@ -49,7 +51,7 @@ export const getServerSideProps = async () => {
    mainImage,
    slug,
    publishedAt
-  } | order(_createdAt desc)`;
+  } | order(publishedAt desc)`;
   const blogPostData = await client.fetch(blogPost);
 
   return {
