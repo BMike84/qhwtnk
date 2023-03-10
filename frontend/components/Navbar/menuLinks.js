@@ -4,7 +4,7 @@ const navLinks = [
     title: "Services",
   },
   {
-    link: "/blog",
+    link: "/post",
     title: "Blog",
   },
   {

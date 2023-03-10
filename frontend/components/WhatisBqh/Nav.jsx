@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <div className="absolute top-5 w-[90%] text-xs md:text-lg font-semibold text-gray-800">
+    <nav className="absolute top-5 w-[90%] text-xs md:text-lg font-semibold text-gray-800">
       <ul className="flex md:justify-evenly justify-between text-center gap-4">
         <Link
           href="/whatIs/bqh"
@@ -30,7 +30,7 @@ const Nav = () => {
           Resources
         </Link>
       </ul>
-    </div>
+    </nav>
   );
 };
 
