@@ -155,7 +155,7 @@ const WBQH = () => {
           </div>
         </div>
         <Link
-          href="/whatBqh/sessions"
+          href="/whatIs/sessions"
           className="mt-6 mb-12 font-bold text-xs md:text-lg"
         >
           Read Next: Session Parts and Hypnosis
