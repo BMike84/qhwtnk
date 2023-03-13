@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const BlogCard = ({ posts }) => {
   return (
-    <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-5 mb-3">
+    <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-5 mb-12 ">
       {posts.length > 0 &&
         posts.map(
           ({
@@ -38,12 +38,14 @@ const BlogCard = ({ posts }) => {
                       {title}
                     </h2>
                     <div className="flex items-center justify-evenly  text-xs  xl:text-base text-gray-600 font-semibold">
-                      <img
-                        src={urlFor(authorImage)}
-                        className="rounded-full h-8 lg:h-10"
-                        alt={username}
-                      />
-                      <p>{username}</p>
+                      <div className="flex items-center gap-2">
+                        <img
+                          src={urlFor(authorImage)}
+                          className="rounded-full h-8 lg:h-10"
+                          alt={username}
+                        />
+                        <p>{username}</p>
+                      </div>
                       <p>{new Date(publishedAt).toDateString()}</p>
                     </div>
                   </div>
