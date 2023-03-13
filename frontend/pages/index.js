@@ -1,13 +1,12 @@
 import React from "react";
 import {
-  ServiceCard,
   FeatureBlog,
-  // BlogCard,
   Contact,
   HeroBanner,
   TestimonialsCard,
   YouTubeBook,
   Meet,
+  FeatureServices,
 } from "@/components";
 
 import { client } from "@/lib/client";
@@ -17,7 +16,7 @@ const Home = ({ products, bannerData, testimonialsData, blogPostData }) => {
   return (
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-      <ServiceCard products={products} />
+      <FeatureServices products={products} />
       <Meet />
       <FeatureBlog posts={blogPostData} />
       <YouTubeBook />

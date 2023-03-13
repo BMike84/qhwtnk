@@ -10,23 +10,23 @@ function classNames(...classes) {
 const servicesLinks = [
   {
     title: "All Services",
-    link: "/#featureservices",
+    link: "/services",
   },
   {
     title: "BEYOND QUANTUM HEALING (BQH)",
-    link: "/#bqh",
+    link: "/services/bqh",
   },
   {
     title: "REMOTE SPIRIT RELEASE (RSR)",
-    link: "/#rsr",
+    link: "/services/rsr",
   },
   {
     title: "MENTORSHIP & EMPOWERMENT PACKAGES",
-    link: "/#mentorship",
+    link: "/services/mentorship",
   },
   {
     title: "COVIDx CLEARING",
-    link: "/#covidclearing",
+    link: "/services/covidclearing",
   },
 ];
 
