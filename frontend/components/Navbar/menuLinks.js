@@ -1,6 +1,6 @@
 const navLinks = [
   {
-    link: "/#featureservices",
+    link: "/services",
     title: "Services",
   },
   {

@@ -37,6 +37,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'smallDetails',
+      title: 'Small Details',
+      type: 'string',
+    },
+    {
       name: 'feature',
       title: 'Feature',
       type: 'boolean',

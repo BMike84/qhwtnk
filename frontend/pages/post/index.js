@@ -1,8 +1,7 @@
 import React from "react";
 import groq from "groq";
 import { client } from "@/lib/client";
-import { BlogCard, Copyright } from "@/components";
-import { SocialMedia, Contact } from "@/components";
+import { BlogCard, Copyright, SocialMedia } from "@/components";
 
 const Index = ({ posts }) => {
   return (
