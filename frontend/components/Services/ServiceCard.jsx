@@ -5,7 +5,11 @@ import Link from "next/link";
 const ServiceCard = ({ products, product }) => {
   return (
     <div className="mb-8 w-full px-1">
-      <Link key={product._id} href="" className="group">
+      <Link
+        key={product._id}
+        href={`/services/${product.slug.current}`}
+        className="group"
+      >
         <div className="overflow-hidden rounded-lg">
           <img
             src={urlFor(product.image && product.image[0])}
