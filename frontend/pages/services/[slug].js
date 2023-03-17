@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { urlFor, client } from "@/lib/client";
-import Link from "next/link";
 import { SocialMedia, Copyright, ServiceCard } from "@/components";
 
 import Carousel from "react-multi-carousel";
