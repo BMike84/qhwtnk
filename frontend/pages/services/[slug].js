@@ -37,6 +37,7 @@ const ProductDetails = ({ product, products }) => {
             <div className="w-full flex flex-col lg:flex-row">
               <div className="flex flex-col items-center gap-6 lg:w-2/4 p-4">
                 <img
+                  alt="product image"
                   src={urlFor(image && image[index])}
                   className="rounded-lg w-[90%] h-[500px]"
                 />
@@ -69,8 +70,8 @@ const ProductDetails = ({ product, products }) => {
           </div>
           <div className="flex flex-col items-center lg:flex-row gap-3 ml-10">
             {youtubeString?.length > 1
-              ? youtubeString.map((video) => (
-                  <div className="">
+              ? youtubeString.map((video, index) => (
+                  <div key={index}>
                     <iframe
                       src={video}
                       title="YouTube video player"
