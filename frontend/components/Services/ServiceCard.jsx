@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ServiceCard = ({ products, product }) => {
   return (
-    <div className="mb-8 w-full">
+    <div className="mb-8 w-full px-1">
       <Link key={product._id} href="" className="group">
         <div className="overflow-hidden rounded-lg">
           <img

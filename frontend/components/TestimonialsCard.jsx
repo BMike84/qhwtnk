@@ -1,5 +1,4 @@
 import React from "react";
-import { urlFor } from "@/lib/client";
 import Image from "next/image";
 import images from "@/constants/images";
 import { motion } from "framer-motion";
@@ -50,7 +49,8 @@ const TestimonialsCard = ({ testimonials }) => {
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
-        autoPlaySpeed={500}
+        autoPlay={true}
+        autoPlaySpeed={4000}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={20}

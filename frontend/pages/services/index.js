@@ -13,7 +13,6 @@ const Index = ({ products }) => {
             <ServiceCard key={product._id} product={product} />
           ))}
         </div>
-        {/* <ServiceCard products={products} /> */}
       </div>
     </main>
   );
