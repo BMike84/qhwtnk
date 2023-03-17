@@ -67,7 +67,7 @@ const ProductDetails = ({ product, products }) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center lg:flex-row gap-3 ml-10">
+          <div className="flex flex-col items-center lg:flex-row gap-3 ml-4">
             {youtubeString?.length > 1
               ? youtubeString.map((video, index) => (
                   <div key={index}>
