@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import images from "@/constants/images";
 import { motion } from "framer-motion";
-import { Copyright, NavigationDots, SocialMedia } from ".";
+import { Copyright, NavigationDots, SocialMedia } from "..";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 

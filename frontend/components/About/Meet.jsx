@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { images } from "@/constants";
 import { motion } from "framer-motion";
-import { NavigationDots, QuoteBanner, SocialMedia, Copyright } from ".";
+import { NavigationDots, QuoteBanner, SocialMedia, Copyright } from "..";
 
 const Meet = () => {
   return (
