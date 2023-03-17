@@ -27,6 +27,7 @@ const responsive = {
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price, smallDetails, youtubeString } = product;
   const [index, setindex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <article className="flex flex-wrap justify-center gap-2  w-full bg-gray-900 h-screen  py-28">
@@ -58,7 +59,16 @@ const ProductDetails = ({ product, products }) => {
                 <h1 className="font-bold text-xl lg:text-3xl">{name}</h1>
                 <div className="flex flex-col items-center gap-5 text-gray-700">
                   <p className="mb-6 text-sm text-center">{smallDetails}</p>
-                  <p className="lg:w-4/5 text-lg  font-medium">{details}</p>
+
+                  <p className="lg:w-4/5 text-lg  font-medium flex flex-col items-center">
+                    {showMore ? details : `${details.substring(0, 200)}`}
+                    <button
+                      className="text-red-900 border-b-2 border-black uppercase text-sm mt-2"
+                      onClick={() => setShowMore(!showMore)}
+                    >
+                      {showMore ? "Show less" : "Show more"}
+                    </button>
+                  </p>
                   <p className="text-3xl font-semibold">${price}</p>
                 </div>
                 <button className=" mb-6 lg:mb-0 mt-10 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
