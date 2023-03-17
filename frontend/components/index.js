@@ -4,7 +4,7 @@ export { default as HeroBanner } from "./HeroBanner";
 export { default as Layout } from "./Layout";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as ServiceCard } from "./Services/ServiceCard";
-export { default as QuoteBanner } from "./QuoteBanner";
+export { default as QuoteBanner } from "./About/QuoteBanner";
 export { default as TestimonialsCard } from "./Testimonials/TestimonialsCard";
 export { default as YouTubeBook } from "./YouTubeBook";
 export { default as FeatureBlog } from "@/components/Blog/FeatureBlog";
