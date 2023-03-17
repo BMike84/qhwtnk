@@ -38,7 +38,7 @@ const ProductDetails = ({ product, products }) => {
                 <img
                   alt="product image"
                   src={urlFor(image && image[index])}
-                  className="rounded-lg w-[90%] h-[500px]"
+                  className="rounded-lg w-[80%] h-[250px] mdSm:w-2/3 mdSm:h-[330px] md:h-[400px]  lg:h-[500px] lg: w-full"
                 />
                 {youtubeString?.length === 1
                   ? youtubeString.map((video) => (

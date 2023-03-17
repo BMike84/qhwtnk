@@ -14,19 +14,19 @@ const servicesLinks = [
   },
   {
     title: "BEYOND QUANTUM HEALING (BQH)",
-    link: "/services/bqh",
+    link: "/services",
   },
   {
     title: "REMOTE SPIRIT RELEASE (RSR)",
-    link: "/services/rsr",
+    link: "/services",
   },
   {
     title: "MENTORSHIP & EMPOWERMENT PACKAGES",
-    link: "/services/mentorship",
+    link: "/services",
   },
   {
     title: "COVIDx CLEARING",
-    link: "/services/covidclearing",
+    link: "/services",
   },
 ];
 
