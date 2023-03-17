@@ -40,6 +40,9 @@ const FeatureServices = ({ products }) => {
                   <h3 className="mt-4 text-md font-semibold text-gray-700">
                     {product.name}
                   </h3>
+                  <h4 className="mt-1 text-sm font-medium text-gray-800">
+                    {product.popular}
+                  </h4>
                   <p className="mt-1 text-lg font-medium text-gray-900">
                     ${product.price}
                   </p>

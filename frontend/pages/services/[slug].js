@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { urlFor, client } from "@/lib/client";
+import Link from "next/link";
 import { SocialMedia, Copyright, ServiceCard } from "@/components";
 
 import Carousel from "react-multi-carousel";
@@ -25,33 +26,62 @@ const responsive = {
 };
 
 const ProductDetails = ({ product, products }) => {
-  const { image, name, details, price, smallDetails } = product;
+  const { image, name, details, price, smallDetails, youtubeString } = product;
   const [index, setindex] = useState(0);
 
   return (
     <article className="flex flex-wrap justify-center gap-2  w-full bg-gray-900 h-screen  py-28">
-      <div className="relative flex flex-col w-full gap-2 bg-[#F8F4EA] pb-20 px-8">
-        <div className="flex flex-col mt-10 lg:flex-row lg:gap-2 bg-white rounded-2xl shadow-lg">
-          <div className="flex flex-col gap-6 lg:w-2/4 p-8">
-            <img
-              src={urlFor(image && image[index])}
-              className="rounded-lg w-full lg:w-[90%] lg:h-[500px]"
-            />
-          </div>
-          <div className="flex flex-col justify-center items-center gap-2 lg:w-2/4 px-8 text-center ">
-            <h1 className="font-bold text-xl lg:text-5xl">{name}</h1>
-            <div className="mt-3 flex flex-col items-center gap-5 text-gray-700">
-              <p className="mb-6 lg:w-4/5 text-sm text-center">
-                {smallDetails}
-              </p>
-              <p className="lg:w-4/5 text-lg md:text-xl font-medium">
-                {details}
-              </p>
-              <p className="text-3xl font-semibold">${price}</p>
+      <div className="relative flex flex-col w-full gap-2 bg-[#F8F4EA] pb-20 px-3 lg:px-8">
+        <div className="flex flex-col mt-4 lg:mt-10  lg:gap-2 bg-[#f1f1f1] rounded-2xl shadow-lg py-10">
+          <div className="">
+            <div className="w-full flex flex-col lg:flex-row">
+              <div className="flex flex-col items-center gap-6 lg:w-2/4 p-4">
+                <img
+                  alt="product image"
+                  src={urlFor(image && image[index])}
+                  className="rounded-lg w-[90%] h-[500px]"
+                />
+                {youtubeString?.length === 1
+                  ? youtubeString.map((video) => (
+                      <div className="">
+                        <iframe
+                          src={video}
+                          title="YouTube video player"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                          className=" w-[290px] h-[190px] mdSm:w-[300px] mdSm:h-[190px] md:w-[360px] md:h-[200px] lg:w-[500px] lg:h-[280px]"
+                        />
+                      </div>
+                    ))
+                  : ""}
+              </div>
+              <div className="flex flex-col pt-10 items-center gap-2 lg:w-2/4 px-4 text-center ">
+                <h1 className="font-bold text-xl lg:text-3xl">{name}</h1>
+                <div className="flex flex-col items-center gap-5 text-gray-700">
+                  <p className="mb-6 text-sm text-center">{smallDetails}</p>
+                  <p className="lg:w-4/5 text-lg  font-medium">{details}</p>
+                  <p className="text-3xl font-semibold">${price}</p>
+                </div>
+                <button className=" mb-6 lg:mb-0 mt-10 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
+                  Book Now
+                </button>
+              </div>
             </div>
-            <button className=" mb-6 lg:mb-0 mt-10 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
-              Book Now
-            </button>
+          </div>
+          <div className="flex flex-col items-center lg:flex-row gap-3 ml-10">
+            {youtubeString?.length > 1
+              ? youtubeString.map((video, index) => (
+                  <div key={index}>
+                    <iframe
+                      src={video}
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className=" w-[290px] h-[190px] mdSm:w-[300px] mdSm:h-[190px] md:w-[360px] md:h-[200px] lg:w-[500px] lg:h-[280px]"
+                    />
+                  </div>
+                ))
+              : ""}
           </div>
         </div>
         <div className="flex flex-col w-full gap-4 mt-8">

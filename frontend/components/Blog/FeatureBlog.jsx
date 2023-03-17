@@ -50,7 +50,7 @@ const FeatureBlog = ({ posts }) => {
                           className="h-[170px] lg:h-[230px] w-full object-cover object-center group-hover:opacity-75 "
                         />
                       </div>
-                      <div className="flex flex-col justify-between h-[80px] lg:h-[100px]">
+                      <div className="flex flex-col justify-between h-[70px] lg:h-[100px]">
                         <h2 className="text-sm lg:text-lg font-bold text-center px-2">
                           {title}
                         </h2>
@@ -58,7 +58,7 @@ const FeatureBlog = ({ posts }) => {
                           <div className="flex items-center gap-2">
                             <img
                               src={urlFor(authorImage)}
-                              className="rounded-full h-8 lg:h-10"
+                              className="rounded-full h-7 lg:h-9"
                               alt={username}
                             />
                             <p>{username}</p>

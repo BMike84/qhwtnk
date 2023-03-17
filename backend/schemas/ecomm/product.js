@@ -42,6 +42,17 @@ export default {
       type: 'string',
     },
     {
+      name: 'popular',
+      title: 'Popular',
+      type: 'string',
+    },
+    {
+      name: 'youtubeString',
+      title: 'Youtube',
+      type: 'array',
+      of: [{type: 'string'}],
+    },
+    {
       name: 'feature',
       title: 'Feature',
       type: 'boolean',
