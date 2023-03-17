@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import images from "@/constants/images";
 import { motion } from "framer-motion";
 import { Copyright, NavigationDots, SocialMedia } from "..";
@@ -82,9 +83,12 @@ const TestimonialsCard = ({ testimonials }) => {
           </div>
         ))}
       </Carousel>
-      <button className="px-8 py-1.5 mb-14 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
+      <Link
+        href="/testimonials"
+        className="px-8 py-1.5 mb-14 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 "
+      >
         View All
-      </button>
+      </Link>
     </motion.section>
   );
 };

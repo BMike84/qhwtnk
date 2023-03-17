@@ -20,7 +20,7 @@ const BlogCard = ({ posts }) => {
             slug && (
               <div
                 key={_id}
-                className="md:w-[100%] border-3 pb-4 shadow-2xl rounded-xl bg-white"
+                className="md:w-[100%] border-3 pb-4 shadow-2xl rounded-xl bg-[#f1f1f1]"
               >
                 <Link
                   href={`/post/${encodeURIComponent(slug.current)}`}
