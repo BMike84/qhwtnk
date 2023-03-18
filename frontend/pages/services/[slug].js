@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { urlFor, client } from "@/lib/client";
 import { SocialMedia, Copyright, ServiceCard } from "@/components";
 
@@ -25,9 +25,14 @@ const responsive = {
 };
 
 const ProductDetails = ({ product, products }) => {
-  const { image, name, details, price, smallDetails, youtubeString } = product;
+  const { image, name, details, price, smallDetails, youtubeString, _id } =
+    product;
   const [index, setindex] = useState(0);
   const [showMore, setShowMore] = useState(false);
+
+  useEffect(() => {
+    setShowMore(false);
+  }, [_id]);
 
   return (
     <article className="flex flex-wrap justify-center gap-2  w-full bg-gray-900 h-screen  py-28">
@@ -61,7 +66,9 @@ const ProductDetails = ({ product, products }) => {
                   <p className="mb-6 text-sm text-center">{smallDetails}</p>
 
                   <p className="lg:w-4/5 text-lg  font-medium flex flex-col items-center">
-                    {showMore ? details : `${details.substring(0, 200)}`}
+                    {showMore
+                      ? details
+                      : `${details.substring(0, 130).concat("...")}`}
                     <button
                       className="text-red-900 border-b-2 border-black uppercase text-sm mt-2"
                       onClick={() => setShowMore(!showMore)}
