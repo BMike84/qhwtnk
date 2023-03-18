@@ -37,6 +37,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'bodyDetails',
+      title: 'Body Details',
+      type: 'text',
+    },
+    {
       name: 'smallDetails',
       title: 'Small Details',
       type: 'string',
