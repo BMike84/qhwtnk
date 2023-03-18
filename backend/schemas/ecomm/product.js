@@ -52,6 +52,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'categoy',
+      title: 'Category',
+      type: 'string',
+    },
+    {
       name: 'youtubeString',
       title: 'Youtube',
       type: 'array',

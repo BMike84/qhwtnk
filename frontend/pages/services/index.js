@@ -1,4 +1,5 @@
 import { client } from "@/lib/client";
+import groq from "groq";
 import { SocialMedia, Copyright, ServiceCard } from "@/components";
 
 const Index = ({ products }) => {
@@ -19,7 +20,22 @@ const Index = ({ products }) => {
 };
 
 export async function getStaticProps() {
-  const query = '*[_type == "product"]';
+  const query = groq`*[_type == "product"]{
+    _id,
+    image,
+    name,
+    slug,
+    price,
+    details,
+    bodyDetails,
+    smallDetails,
+    popular,
+    youtubeString,
+    feature, 
+    category
+  } | order(feature != true  )
+
+  `;
   const products = await client.fetch(query);
 
   return {
