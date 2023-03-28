@@ -10,27 +10,32 @@ function classNames(...classes) {
 const servicesLinks = [
   {
     title: "All Services",
+    tag: "All",
     link: "/services",
   },
   {
     title: "BEYOND QUANTUM HEALING (BQH)",
+    tag: "bqh",
     link: "/services",
   },
   {
     title: "REMOTE SPIRIT RELEASE (RSR)",
+    tag: "rsr",
     link: "/services",
   },
   {
     title: "MENTORSHIP & EMPOWERMENT PACKAGES",
+    tag: "mentorship",
     link: "/services",
   },
-  {
-    title: "COVIDx CLEARING",
-    link: "/services",
-  },
+  // {
+  //   title: "COVIDx CLEARING",
+  //   tag: "covid",
+  //   link: "/services",
+  // },
 ];
 
-const DropDownServices = ({ close }) => {
+const DropDownServices = ({ close, handleWorkFilter }) => {
   return (
     <Menu as="div" className="relative inline-block text-left z-50">
       <Menu.Button className="flex items-center gap-1 hover:text-sky-500">

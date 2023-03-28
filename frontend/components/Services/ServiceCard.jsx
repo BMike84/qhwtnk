@@ -10,11 +10,11 @@ const ServiceCard = ({ products, product }) => {
         href={`/services/${product.slug.current}`}
         className="group"
       >
-        <div className="overflow-hidden rounded-lg">
+        <div className="overflow-hidden rounded-lg w-full">
           <img
             src={urlFor(product.image && product.image[0])}
             alt={product.imageAlt}
-            className="h-[200px] xl:h-[270px] w-full object-cover object-center group-hover:opacity-75 "
+            className="h-[200px] xl:h-[270px] min-w-[400px] w-full object-cover object-center group-hover:opacity-75 "
           />
         </div>
         <h3 className="mt-4 text-md xl:text-lg font-semibold text-gray-700 text-center sm:text-start">

@@ -78,8 +78,6 @@ const Navbar = () => {
                 {item.title}
               </Link>
             </li>
-          ) : item.title === "Services" ? (
-            <DropDownServices key={index + 2} />
           ) : item.title === "What Is?" ? (
             <DropDownWhatIs key={index + 7} />
           ) : (
@@ -124,9 +122,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 {navLinks.map((item, index) =>
-                  item.title === "Services" ? (
-                    <DropDownServices key={index + 5} close={toggleOnClick} />
-                  ) : item.title === "What Is?" ? (
+                  item.title === "What Is?" ? (
                     <DropDownWhatIs key={index} close={toggleOnClick} />
                   ) : (
                     <li className="py-8" key={`link-${item.title}`}>
