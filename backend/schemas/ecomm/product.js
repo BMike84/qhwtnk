@@ -52,9 +52,16 @@ export default {
       type: 'string',
     },
     {
-      name: 'categoy',
-      title: 'Category',
-      type: 'string',
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [
+        {
+          name: 'category',
+          title: 'Category',
+          type: 'string',
+        },
+      ],
     },
     {
       name: 'youtubeString',
