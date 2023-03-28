@@ -32,7 +32,7 @@ const Index = ({ products }) => {
         <SocialMedia />
         <Copyright />
         <h1 className="font-bold text-xl uppercase">
-          {activeFilter === "all"
+          {activeFilter.toLowerCase() === "all"
             ? "All Services"
             : activeFilter === "bqh"
             ? "BEYOND QUANTUM HEALING (BQH) Services"
