@@ -97,8 +97,8 @@ const Navbar = () => {
         href="/"
         className={
           buttonColor
-            ? "hidden md:block md:text-xs lg:text-sm border-2  border-black z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
-            : "hidden md:block md:text-xs lg:text-sm border-2 z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
+            ? "hidden md:block md:text-xs lg:text-sm border-2  border-black z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 hover:text-sky-500"
+            : "hidden md:block md:text-xs lg:text-sm border-2 z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 hover:text-sky-500"
         }
       >
         Book Now
@@ -115,8 +115,8 @@ const Navbar = () => {
               className="fixed top-0 right-0 bottom-0 z-[5] p-4 w-[80%] h-screen flex justify-end items-end flex-col bg-black text-white"
             >
               <IoMdHeartDislike onClick={() => setToggle(false)} />
-              <ul className="relative h-full w-full flex flex-col items-left">
-                <li className="mb-8">
+              <ul className="relative h-full w-full flex flex-col items-left gap-5 pt-8">
+                <li>
                   <Link href="/" onClick={() => setToggle(false)}>
                     Home
                   </Link>
@@ -125,7 +125,7 @@ const Navbar = () => {
                   item.title === "What Is?" ? (
                     <DropDownWhatIs key={index} close={toggleOnClick} />
                   ) : (
-                    <li className="py-8" key={`link-${item.title}`}>
+                    <li key={`link-${item.title}`}>
                       <Link
                         href={item.link}
                         className="hover:text-sky-500"

@@ -31,7 +31,7 @@ const Index = ({ products }) => {
       <div className="relative flex flex-col gap-8 items-center bg-[#F8F4EA] py-12 px-8 lg:px-20">
         <SocialMedia />
         <Copyright />
-        <h1 className="font-bold text-xl uppercase">
+        <h1 className="font-bold text-xl uppercase text-center">
           {activeFilter.toLowerCase() === "all"
             ? "All Services"
             : activeFilter === "bqh"
@@ -58,10 +58,10 @@ const Index = ({ products }) => {
         <div
           className={`${
             filterService.length >= 3
-              ? "grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mb-3 place-items-center"
+              ? "grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 mb-3 place-items-center w-full"
               : filterService.length === 2
-              ? "grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2  mb-3 "
-              : "grid grid-cols-1 gap-y-10 gap-x-6   mb-3 "
+              ? "grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-2  mb-3 place-items-center"
+              : "grid grid-cols-1 gap-y-10 gap-x-6  mb-3 w-full place-items-center "
           }`}
         >
           {filterService.map((product) => (

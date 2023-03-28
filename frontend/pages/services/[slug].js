@@ -46,11 +46,11 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <article className="flex flex-wrap justify-center gap-2  w-full bg-gray-900 h-screen  py-28">
-      <div className="relative flex flex-col w-full gap-2 bg-[#F8F4EA] pb-20 px-3 lg:px-8">
+      <div className="relative flex flex-col w-full gap-2 bg-[#F8F4EA] pb-20 px-2 lg:px-8">
         <div className="flex flex-col mt-4 lg:mt-10  lg:gap-2 bg-[#f1f1f1] rounded-2xl shadow-lg py-10">
           <div className="">
             <div className="w-full flex flex-col lg:flex-row">
-              <div className="flex flex-col items-center gap-6 lg:w-2/4 p-4">
+              <div className="flex flex-col items-center gap-6 lg:w-2/4 px-2 sm:px-0 py-4">
                 <img
                   alt="product image"
                   src={urlFor(image && image[index])}
@@ -117,7 +117,7 @@ const ProductDetails = ({ product, products }) => {
           <h2 className="text-xl font-semibold text-center uppercase">
             You May also like
           </h2>
-          <div className="flex justify-center">
+          <div className="flex justify-center sm:px-10">
             <Carousel
               swipeable={true}
               draggable={true}

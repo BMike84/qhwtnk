@@ -50,9 +50,12 @@ const FeatureServices = ({ products }) => {
               )
           )}
         </div>
-        <button className="mb-20 md:mb-14 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
+        <Link
+          href="/services"
+          className="mb-20 md:mb-14 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 "
+        >
           View All
-        </button>
+        </Link>
       </motion.div>
     </div>
   );
