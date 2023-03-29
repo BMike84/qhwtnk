@@ -63,13 +63,13 @@ function Contact() {
             className="md:block rounded-xl hover:scale-105 ease-in duration-300 md:w-[200px] lg:w-[250px]"
           />
           <div>
-            <h2 className="mb-4 text-2xl lg:text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+            <h2 className="mb-4 text-2xl lg:text-4xl tracking-tight font-extrabold text-center  text-white">
               Contact Us
             </h2>
-            <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-lg lg:text-xl ">
+            <p className="font-light text-center  text-gray-400 sm:text-lg lg:text-xl ">
               For General Inquiries and Bookings
             </p>
-            <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-lg lg:text-xl">
+            <p className="font-light text-center text-gray-400 sm:text-lg lg:text-xl">
               Email: QuantumHealingwithTena@gmail.com
             </p>
           </div>
@@ -134,7 +134,6 @@ function Contact() {
                 placeholder="Enter your message"
                 name="message"
                 className="shadow-sm  border text-sm rounded-lg ring-primary-500 border-primary-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white ring-primary-500 border-primary-500 shadow-sm-light"
-                // className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 {...register("message", { required: true })}
               ></textarea>
               {errors.message && (
