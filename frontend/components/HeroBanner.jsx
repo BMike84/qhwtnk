@@ -20,7 +20,7 @@ const HeroBanner = ({ heroBanner }) => {
             alt="main background"
           />
         </div>
-        <div className=" flex flex-col items-center text-center">
+        <div className=" flex flex-col items-center text-center  opacity-80">
           <h3 className="text-2xl pb-2 lg:text-4xl">{heroBanner.largeText}</h3>
           <p className="text-xs text-center pb-4 lg:text-lg w-3/4">
             {heroBanner.desc}
