@@ -150,7 +150,7 @@ function Contact() {
             </div>
           </form>
         ) : (
-          <div className="text-gray-200 flex flex-col items-center text-2xl gap-2">
+          <div className="text-gray-200 flex flex-col items-center text-sm lg:text-2xl gap-2">
             <h3>Thank you for getting in touch.</h3>
             <h3>Give us 24-48hrs to get back to you.</h3>
           </div>
