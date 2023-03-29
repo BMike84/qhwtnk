@@ -7,8 +7,6 @@ import { motion } from "framer-motion";
 import { Copyright, NavigationDots, SocialMedia } from ".";
 
 function Contact() {
-  const [statusMessage, setStatusMessage] = useState("");
-
   const {
     register,
     handleSubmit,
@@ -46,7 +44,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-white text-white dark:bg-gray-900 py-10 px-4 md:px-14 scroll-mt-24"
+      className="relative bg-gray-900  text-white py-10 px-4 md:px-14 scroll-mt-24"
     >
       <NavigationDots />
       <SocialMedia />

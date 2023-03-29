@@ -59,12 +59,12 @@ const TestimonialsCard = ({ testimonials }) => {
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
-        className="w-full lg:w-4/5 mb-8"
+        className="w-full  mb-8 "
       >
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="flex flex-col gap-2 items-center h-auto justify-evenly mb-8"
+            className="flex flex-col gap-2 items-center h-auto justify-evenly mb-8 lg:px-24"
           >
             <div className="flex justify-center gap-4 items-center">
               <Image

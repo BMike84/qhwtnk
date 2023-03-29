@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ServiceCard = ({ products, product }) => {
   return (
-    <div className="mb-8 w-4/5 md:w-full px-1 ">
+    <div className="mb-8 w-full  px-1 ">
       <Link
         key={product._id}
         href={`/services/${product.slug.current}`}
