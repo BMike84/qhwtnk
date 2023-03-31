@@ -8,8 +8,9 @@ import { FaHandHoldingHeart } from "react-icons/fa";
 import { DropDownServices, DropDownWhatIs } from "..";
 
 import navLinks from "./menuLinks";
+import CalendlyButton from "../calendly/CalendlyButton";
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   const [toggle, setToggle] = useState(false);
   //change colors on scroll
   const [navColor, setNavColor] = useState(false);
@@ -93,8 +94,17 @@ const Navbar = () => {
           )
         )}
       </ul>
+      <CalendlyButton
+        className={
+          buttonColor
+            ? "hidden md:block md:text-xs lg:text-sm border-2  border-black z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 hover:text-sky-500"
+            : "hidden md:block md:text-xs lg:text-sm border-2 z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 hover:text-sky-500"
+        }
+      />
+      {/* 
       <Link
-        href="/"
+        target="_blank"
+        href="https://calendly.com/michael-3382"
         className={
           buttonColor
             ? "hidden md:block md:text-xs lg:text-sm border-2  border-black z-10 px-4 py-[0.33rem] ease-in-out font-bold duration-300 hover:text-sky-500"
@@ -102,7 +112,7 @@ const Navbar = () => {
         }
       >
         Book Now
-      </Link>
+      </Link> */}
 
       <div className="relative md:hidden">
         <FaHandHoldingHeart onClick={() => setToggle(true)} />
@@ -136,12 +146,10 @@ const Navbar = () => {
                     </li>
                   )
                 )}
-                <Link
+                <CalendlyButton
                   href="/"
                   className="absolute top-80 mt-10  border-2 z-10 px-3 py-[0.33rem] ease-in-out font-bold duration-300 rounded-3xl hover:text-sky-500"
-                >
-                  Book Now
-                </Link>
+                />
               </ul>
             </motion.div>
           </>
