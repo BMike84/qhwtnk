@@ -1,8 +1,9 @@
 import React from "react";
 import { urlFor } from "@/lib/client";
 import Link from "next/link";
+import SlugCalendlyButton from "../calendly/SlugCalendlyButton";
 
-const ServiceCard = ({ products, product }) => {
+const ServiceCard = ({ product }) => {
   return (
     <div className="mb-8 w-full  px-1 ">
       <Link
@@ -23,9 +24,12 @@ const ServiceCard = ({ products, product }) => {
         </div>
       </Link>
       <div className="flex justify-center">
-        <button className="px-6 py-[0.33rem] border-2 border-black  hover:bg-gray-900 hover:text-white ease-in duration-200 text-sm sm:text-xs">
-          Book Now
-        </button>
+        {product.slug.current && (
+          <SlugCalendlyButton
+            url={product.calendly}
+            className="px-6 py-[0.33rem] border-2 border-black  hover:bg-gray-900 hover:text-white ease-in duration-200 text-sm sm:text-xs"
+          />
+        )}
       </div>
     </div>
   );

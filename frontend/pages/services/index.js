@@ -85,6 +85,7 @@ export async function getStaticProps() {
     smallDetails,
     popular,
     youtubeString,
+    calendly,
     feature, 
     categories[],
   } | order(feature != true  )

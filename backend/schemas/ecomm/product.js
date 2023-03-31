@@ -70,6 +70,11 @@ export default {
       of: [{type: 'string'}],
     },
     {
+      name: 'calendly',
+      title: 'Calendly Url',
+      type: 'string',
+    },
+    {
       name: 'feature',
       title: 'Feature',
       type: 'boolean',
