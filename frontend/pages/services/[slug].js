@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { urlFor, client } from "@/lib/client";
 import { SocialMedia, Copyright, ServiceCard } from "@/components";
+import SlugCalendlyButton from "@/components/calendly/SlugCalendlyButton";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -32,6 +33,7 @@ const ProductDetails = ({ product, products }) => {
     price,
     smallDetails,
     youtubeString,
+    calendly,
     _id,
     bodyDetails,
   } = product;
@@ -91,9 +93,17 @@ const ProductDetails = ({ product, products }) => {
                   </p>
                   <p className="text-3xl font-semibold">${price}</p>
                 </div>
-                <button className=" mb-6 lg:mb-0 mt-10 px-8 py-1.5 border-2 border-black h font-bold hover:bg-gray-900 hover:text-white ease-in duration-200 ">
-                  Book Now
-                </button>
+                <div className="flex gap-2">
+                  <button className=" mb-6 lg:mb-0 mt-10 px-8 py-1.5 border-2 border-black h font-bold bg-gray-900 text-white hover:text-black hover:bg-inherit ease-in duration-200 ">
+                    Pay Now
+                  </button>
+                  <SlugCalendlyButton
+                    url={calendly}
+                    className=" mb-6 lg:mb-0 mt-10 px-8
+                py-1.5 border-2 border-black h font-bold hover:bg-gray-900
+                hover:text-white ease-in duration-200 "
+                  />
+                </div>
               </div>
             </div>
           </div>
