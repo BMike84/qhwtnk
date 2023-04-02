@@ -53,9 +53,9 @@ const ProductDetails = ({ product, products }) => {
         <div className="flex mt-4">
           <Link
             href="/services"
-            className="border-2 border-black px-6 py-1 font-extrabold hover:bg-gray-900 hover:text-white ease-in duration-200  flex items-center gap-2 text-xl uppercase"
+            className="border-2 border-black px-6 py-1  hover:bg-gray-900 hover:text-white ease-in duration-200  flex items-center gap-2 text-sm uppercase"
           >
-            <BsFillArrowLeftCircleFill className="text-2xl" /> <span>Back</span>
+            <BsFillArrowLeftCircleFill className="" /> <span>Back</span>
           </Link>
         </div>
         <div className="flex flex-col mt-4 mb-20 lg:mt-2  lg:gap-2 bg-[#f1f1f1] rounded-2xl shadow-lg py-10">
@@ -68,8 +68,8 @@ const ProductDetails = ({ product, products }) => {
                   className="rounded-lg w-full h-[250px] mdSm:w-2/3 mdSm:h-[330px] md:h-[400px]  lg:h-[500px] lg:w-full"
                 />
                 {youtubeString?.length === 1
-                  ? youtubeString.map((video) => (
-                      <div className="">
+                  ? youtubeString.map((video, index) => (
+                      <div className="" key={index}>
                         <iframe
                           src={video}
                           title="YouTube video player"
@@ -102,7 +102,7 @@ const ProductDetails = ({ product, products }) => {
                   </p>
                   <p className="text-3xl font-semibold">${price}</p>
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-4">
                   <SlugCalendlyButton
                     url={calendly}
                     className=" mb-6 lg:mb-0 mt-10 px-8
