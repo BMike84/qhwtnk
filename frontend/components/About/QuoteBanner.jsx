@@ -12,6 +12,7 @@ const QuoteBanner = () => {
       text-center  w-[100%] min-h-[250px] bg-gray-900 text-white mb-16 mt-10"
     >
       <Image
+        alt="Tena and Karen together"
         src={images.TenaKarenTogether}
         width="auto"
         height="auto"

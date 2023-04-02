@@ -10,12 +10,14 @@ const ptComponents = {
         return null;
       }
       return (
-        <img
-          alt={value.alt || " "}
-          loading="lazy"
-          src={urlFor(value)}
-          className="w-full h-1/2  md:w-[90%] md:h-screen md:object-cover m-auto mb-2"
-        />
+        <>
+          <img
+            alt={value.alt || " "}
+            loading="lazy"
+            src={urlFor(value)}
+            className="w-full h-1/2  md:w-[90%] md:h-screen md:object-cover m-auto mb-2"
+          />
+        </>
       );
     },
   },
@@ -48,7 +50,9 @@ const Post = ({ post }) => {
               <p>{new Date(publishedAt).toDateString()}</p>
             </div>
           )}
-          <h1 className="text-3xl text-center">{title}</h1>
+          <h1 className=" font-semibold text-xl lg:text-3xl text-center">
+            {title}
+          </h1>
           {categories && (
             <ul>
               Posted in

@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import coupon from "@/assets/coupon.png";
 import logo_black from "@/assets/logo_black.png";
 import logo_white from "@/assets/logo_white.png";
 import quotations from "@/assets/quotations.png";
@@ -52,4 +53,5 @@ export default {
   TenaCert2,
   bqhbird,
   TenaKarenTogether,
+  coupon,
 };
