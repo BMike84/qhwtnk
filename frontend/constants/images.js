@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import newLogo from "@/assets/newLogo.png";
 import coupon from "@/assets/coupon.png";
 import logo_black from "@/assets/logo_black.png";
 import logo_white from "@/assets/logo_white.png";
@@ -54,4 +55,5 @@ export default {
   bqhbird,
   TenaKarenTogether,
   coupon,
+  newLogo,
 };

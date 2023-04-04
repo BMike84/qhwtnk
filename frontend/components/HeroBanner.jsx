@@ -16,12 +16,12 @@ const HeroBanner = ({ heroBanner, className }) => {
         <SocialMedia />
         <div className="flex justify-center">
           <img
-            className="w-[90%] object-center md:w-[70%]"
+            className="w-[90%] object-center md:w-[70%] mb-10"
             src={urlFor(heroBanner.image)}
             alt="main background"
           />
         </div>
-        <div className=" flex flex-col items-center text-center  opacity-80">
+        <div className=" flex flex-col items-center text-center">
           <h3 className="text-2xl pb-2 lg:text-4xl">{heroBanner.largeText}</h3>
           <p className="text-xs text-center pb-4 lg:text-lg w-3/4">
             {heroBanner.desc}
