@@ -1,7 +1,11 @@
 import groq from "groq";
 import { PortableText } from "@portabletext/react";
+import YouTube from "react-youtube";
+import getYouTubeID from "get-youtube-id";
+
 import { urlFor, client } from "@/lib/client";
-import { SocialMedia, Copyright } from "@/components";
+import { SocialMedia, Copyright, Comments } from "@/components";
+import { CommentForm } from "@/components/Blog/CommentForm";
 
 const ptComponents = {
   types: {
@@ -15,9 +19,16 @@ const ptComponents = {
             alt={value.alt || " "}
             loading="lazy"
             src={urlFor(value)}
-            className="w-full h-1/2  md:w-[90%] md:h-screen md:object-cover m-auto mb-2"
+            className="w-full m-auto my-8  md:w-[90%] md:object-cover "
           />
         </>
+      );
+    },
+    youtube: ({ value }) => {
+      const { url } = value;
+      const id = getYouTubeID(url);
+      return (
+        <YouTube videoId={id} className="flex mt-2 mb-10 justify-center" />
       );
     },
   },
@@ -62,7 +73,11 @@ const Post = ({ post }) => {
             </ul>
           )}
 
-          <PortableText value={body} components={ptComponents} />
+          <div className="flex flex-col ptBlog text-lg leading-[1.65rem]">
+            <PortableText value={body} components={ptComponents} />
+          </div>
+          <Comments comments={post.comments} />
+          <CommentForm _id={post._id} />
         </div>
       </article>
     </>
@@ -75,8 +90,11 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
   publishedAt,
   "categories": categories[]->title,
   "authorImage": author->image,
-  body
+  body,
+  _id,
+  'comments': *[_type == "comment" && post._ref == ^._id]{_id, name, email, comment, _createdAt}
 }`;
+
 export async function getStaticPaths() {
   const paths = await client.fetch(
     groq`*[_type == "post" && defined(slug.current)][].slug.current`

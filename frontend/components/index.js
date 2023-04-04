@@ -16,3 +16,5 @@ export { default as Copyright } from "./Copyright";
 export { default as DropDownServices } from "./Navbar/DropDownServices";
 export { default as DropDownWhatIs } from "./Navbar/DropDownWhatIs";
 export { default as CalendlyButton } from "./calendly/CalendlyButton";
+export { default as Comments } from "./Blog/Comments";
+export { default as CommentForm } from "./Blog/CommentForm";

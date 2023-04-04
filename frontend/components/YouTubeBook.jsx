@@ -64,7 +64,7 @@ const YouTubeBook = () => {
               </div>
               <div className="text-gray-600">
                 <p className="text-xs md900:text-sm  text-gray-600 pb-2">
-                  GET CERTIFIED IN BEYOND QUANTUM HEALING! USE CODE TENAW FOR
+                  GET:Q CERTIFIED IN BEYOND QUANTUM HEALING! USE CODE TENAW FOR
                   10% OFF!
                 </p>
                 <div className="">
