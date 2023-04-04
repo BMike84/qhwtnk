@@ -4,6 +4,7 @@ import category from './blog/category'
 import post from './blog/post'
 import author from './blog/author'
 import youtube from './blog/youtube'
+import comment from './blog/comment'
 //ecomm
 import banner from './ecomm/banner'
 import product from './ecomm/product'
@@ -23,4 +24,5 @@ export const schemaTypes = [
   contact,
   testimonials,
   youtube,
+  comment,
 ]
