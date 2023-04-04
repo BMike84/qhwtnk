@@ -75,7 +75,7 @@ const Post = ({ post }) => {
             <PortableText value={body} components={ptComponents} />
           </div>
         </div>
-        <div className="bg-gray-900 pt-8 px-8">
+        <div className="bg-gray-900 pt-8 px-6">
           <Comments comments={post.comments} />
           <CommentForm _id={post._id} />
         </div>

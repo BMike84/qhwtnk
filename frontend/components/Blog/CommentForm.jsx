@@ -32,19 +32,12 @@ export function CommentForm({ _id }) {
   };
 
   if (isSubmitting) {
-    return <h3>Submitting comment…</h3>;
+    return <h3 className="text-[#c7bb9d]">Submitting comment…</h3>;
   }
   if (hasSubmitted) {
     return (
       <>
-        <h3>Thanks for your comment!</h3>
-        <ul>
-          <li>
-            Name: {formData.name} <br />
-            Email: {formData.email} <br />
-            Comment: {formData.comment}
-          </li>
-        </ul>
+        <h3 className="text-[#c7bb9d]">Thanks for your comment!</h3>
       </>
     );
   }
@@ -52,9 +45,9 @@ export function CommentForm({ _id }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="relative w-full  bg-gray-900 text-[#c7bb9d] mt-10 pb-24"
+      className="relative w-full bg-gray-900 text-[#c7bb9d] mt-10 pb-24"
     >
-      <div className="w-lg lg:w-3/4">
+      <div className="w-full lg:w-3/4">
         <input
           {...register("_id", { required: true })}
           type="hidden"
