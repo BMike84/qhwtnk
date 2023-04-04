@@ -52,7 +52,7 @@ export function CommentForm({ _id }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="relative w-full  bg-gray-900 text-gray-300 mt-10 pb-24"
+      className="relative w-full  bg-gray-900 text-[#c7bb9d] mt-10 pb-24"
     >
       <div className="w-lg lg:w-3/4">
         <input
@@ -88,7 +88,7 @@ export function CommentForm({ _id }) {
         {errors.comment && <p>Comment is required.</p>}
         <input
           type="submit"
-          className="shadow bg-blue-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+          className="shadow bg-sky-700 hover:bg-sky-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
         />
       </div>
       <SocialMedia />
