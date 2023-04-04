@@ -4,7 +4,7 @@ import YouTube from "react-youtube";
 import getYouTubeID from "get-youtube-id";
 
 import { urlFor, client } from "@/lib/client";
-import { SocialMedia, Copyright, Comments } from "@/components";
+import { Comments } from "@/components";
 import { CommentForm } from "@/components/Blog/CommentForm";
 
 const ptComponents = {
@@ -47,11 +47,9 @@ const Post = ({ post }) => {
   return (
     <>
       <article className="bg-gray-900 h-screen py-28">
-        <div className="relative flex flex-col gap-2 bg-[#F8F4EA] pt-12 pb-20 px-8">
-          <SocialMedia />
-          <Copyright />
+        <div className="relative flex flex-col gap-2 bg-[#F8F4EA] pt-12 px-8">
           {authorImage && (
-            <div className="flex items-center gap-4 text-gray-700 justify-center md:justify-start">
+            <div className="flex items-center gap-4 text-gray-700 justify-start">
               <img
                 src={urlFor(authorImage).width(50).url()}
                 alt={`${name}'s picture`}
@@ -61,7 +59,7 @@ const Post = ({ post }) => {
               <p>{new Date(publishedAt).toDateString()}</p>
             </div>
           )}
-          <h1 className=" font-semibold text-xl lg:text-3xl text-center">
+          <h1 className=" font-semibold text-xl sm:text-2xl lg:text-4xl  my-2">
             {title}
           </h1>
           {categories && (
@@ -76,6 +74,8 @@ const Post = ({ post }) => {
           <div className="flex flex-col ptBlog text-lg leading-[1.65rem]">
             <PortableText value={body} components={ptComponents} />
           </div>
+        </div>
+        <div className="bg-gray-900 pt-8 px-8">
           <Comments comments={post.comments} />
           <CommentForm _id={post._id} />
         </div>

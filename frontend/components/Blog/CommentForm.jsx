@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { SocialMedia, Copyright } from "@/components";
 
 export function CommentForm({ _id }) {
   const [formData, setFormData] = useState();
@@ -49,45 +50,49 @@ export function CommentForm({ _id }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-lg">
-      <input
-        {...register("_id", { required: true })}
-        type="hidden"
-        value={_id}
-      />
-      <label className="block mb-5">
-        <span className="text-gray-700">Name</span>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="relative w-full  bg-gray-900 text-gray-300 mt-10 pb-24"
+    >
+      <div className="w-lg lg:w-3/4">
+        <input
+          {...register("_id", { required: true })}
+          type="hidden"
+          value={_id}
+        />
+        <label className="block">Name</label>
         <input
           {...register("name", { required: true })}
-          className="form-input mt-1 block w-full"
-          placeholder="John Appleseed"
+          className="form-input mt-1 block w-full shadow-sm  border text-sm rounded-lg ring-primary-500 border-primary-500 b p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white ring-primary-500 border-primary-500 shadow-sm-light mb-2"
+          placeholder="John Doe"
         />
-      </label>
-      {errors.name && <p>Name is required.</p>}
-      <label className="block mb-5">
-        <span className="text-gray-700">Email</span>
+
+        {errors.name && <p>Name is required.</p>}
+        <label className="block ">Email</label>
         <input
           type="email"
           {...register("email", { required: false })}
-          className="form-input mt-1 block w-full"
+          className="form-input mt-1 block w-full shadow-sm  border text-sm rounded-lg ring-primary-500 border-primary-500 b p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white ring-primary-500 border-primary-500 shadow-sm-light mb-2"
           placeholder="your@email.com"
         />
-      </label>
 
-      <label className="block mb-5">
-        <span className="text-gray-700">Comment</span>
+        <label className="block">Comment</label>
+
         <textarea
           {...register("comment", { required: true })}
-          className="form-textarea mt-1 block w-full"
+          className="form-input mt-1 block w-full shadow-sm  border text-sm rounded-lg ring-primary-500 border-primary-500 b p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white ring-primary-500 border-primary-500 shadow-sm-light mb-6"
           rows="8"
           placeholder="Enter some long form content."
         ></textarea>
-      </label>
-      {errors.comment && <p>Comment is required.</p>}
-      <input
-        type="submit"
-        className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-      />
+
+        {errors.comment && <p>Comment is required.</p>}
+        <input
+          type="submit"
+          className="shadow bg-blue-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+        />
+      </div>
+      <SocialMedia />
+      <Copyright />
     </form>
   );
 }
