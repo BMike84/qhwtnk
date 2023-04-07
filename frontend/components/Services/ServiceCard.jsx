@@ -2,6 +2,8 @@ import React from "react";
 import { urlFor } from "@/lib/client";
 import Link from "next/link";
 import SlugCalendlyButton from "../calendly/SlugCalendlyButton";
+import PaypalButton from "@/components/buttons/PaypalButton";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 const ServiceCard = ({ product }) => {
   return (
@@ -25,10 +27,21 @@ const ServiceCard = ({ product }) => {
       </Link>
       <div className="flex justify-center">
         {product.slug.current && (
-          <SlugCalendlyButton
-            url={product.calendly}
-            className="px-6 py-[0.33rem] border-2 border-black  hover:bg-gray-900 hover:text-white ease-in duration-200 text-sm sm:text-xs"
-          />
+          <div className="flex flex-col gap-2">
+            <SlugCalendlyButton
+              url={product.calendly}
+              className="px-6 py-[0.33rem] border-2 border-black  hover:bg-gray-900 hover:text-white ease-in duration-200"
+            />
+            <PayPalScriptProvider
+              options={{
+                "client-id": "test",
+                "disable-funding": "card",
+                currency: "USD",
+              }}
+            >
+              <PaypalButton price={product.price} />
+            </PayPalScriptProvider>
+          </div>
         )}
       </div>
     </div>

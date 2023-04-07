@@ -1,7 +1,7 @@
 const Comments = ({ comments = [] }) => {
   return (
     <div className="w-lg lg:w-3/4 text-[#c7bb9d] ">
-      <h2 className="mb-4 text-xl leading-tight uppercase text-[#c7bb9d] inline-block border-b">
+      <h2 className="mb-4 text-xl leading-tight uppercase text-[#c7bb9d] inline-block border-b border-[#c7bb9d]">
         Comments
       </h2>
       <ul>

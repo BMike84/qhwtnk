@@ -62,18 +62,16 @@ const Post = ({ post }) => {
           <h1 className=" font-semibold text-xl sm:text-2xl lg:text-4xl  my-2">
             {title}
           </h1>
+          <div className="flex flex-col ptBlog text-lg leading-[1.65rem] mb-10 gap-1">
+            <PortableText value={body} components={ptComponents} />
+          </div>
           {categories && (
             <ul>
-              Posted in
               {categories.map((category) => (
                 <li key={category}>{category}</li>
               ))}
             </ul>
           )}
-
-          <div className="flex flex-col ptBlog text-lg leading-[1.65rem]">
-            <PortableText value={body} components={ptComponents} />
-          </div>
         </div>
         <div className="bg-gray-900 pt-8 px-6">
           <Comments comments={post.comments} />
