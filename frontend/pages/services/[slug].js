@@ -7,28 +7,6 @@ import { SocialMedia, Copyright, ServiceCard } from "@/components";
 import SlugCalendlyButton from "@/components/calendly/SlugCalendlyButton";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
-
-// const responsive = {
-//   desktop: {
-//     breakpoint: { max: 3000, min: 1024 },
-//     items: 3,
-//   },
-//   laptop: {
-//     breakpoint: { max: 1023, min: 700 },
-//     items: 2,
-//   },
-//   tablet: {
-//     breakpoint: { max: 699, min: 465 },
-//     items: 1,
-//   },
-//   mobile: {
-//     breakpoint: { max: 464, min: 0 },
-//     items: 1,
-//   },
-// };
-
 const ProductDetails = ({ product, products }) => {
   const {
     image,
@@ -138,35 +116,7 @@ const ProductDetails = ({ product, products }) => {
               : ""}
           </div>
         </div>
-        {/* <div className="flex flex-col w-full gap-4 mt-8">
-          <h2 className="text-xl font-semibold text-center uppercase">
-            You May also like
-          </h2>
-          <div className="flex justify-center sm:px-10">
-            <Carousel
-              swipeable={true}
-              draggable={true}
-              showDots={true}
-              responsive={responsive}
-              ssr={true} // means to render carousel on server-side.
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={3000}
-              keyBoardControl={true}
-              customTransition="all .5"
-              transitionDuration={20}
-              containerClass="carousel-container"
-              removeArrowOnDeviceType={["tablet", "mobile"]}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
-              className="w-full  mb-8"
-            >
-              {products.map((item) => (
-                <ServiceCard key={item._id} product={item} />
-              ))}
-            </Carousel>
-          </div>
-        </div> */}
+
         <div>
           <SocialMedia />
           <Copyright />
