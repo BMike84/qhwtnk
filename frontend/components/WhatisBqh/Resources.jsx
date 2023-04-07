@@ -14,17 +14,17 @@ const Resources = () => {
           Resources
         </h2>
         <div className="flex flex-col items-center gap-2">
-          <h2 className="font-semibold">BQH Session Preparation</h2>
-          <div className="flex flex-col text-center gap-2">
+          <h2 className="font-semibold uppercase">BQH Session Preparation</h2>
+          <div className="flex flex-col text-center gap-2  underline text-red-700 hover:text-red-900 font-semibold">
             <Link
-              className="text-gray-700 hover:text-gray-900"
+              className=""
               href="https://quantumhealers.com/get-ready"
               target="_blank"
             >
               Get Ready for your Session
             </Link>
             <Link
-              className="text-gray-700 hover:text-gray-900"
+              className=""
               href="http://ww7.quantumhealingpractitioners.com/blog/nine-ways-to-prepare-for-a-quantum-healing-or-qhht-session-56"
               target="_blank"
             >
@@ -33,26 +33,23 @@ const Resources = () => {
           </div>
         </div>
         <div className="flex flex-col items-center text-center gap-2">
-          <h2 className="font-semibold">
+          <h2 className="font-semibold uppercase">
             For Clients with a Strong Conscious Mind
           </h2>
-          <div className="flex flex-col text-center gap-2">
+          <div className="flex flex-col text-center gap-2 underline text-red-700 hover:text-red-900 font-semibold">
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://candacecrawgoldman.com/dear-left-brained-client/"
               target="_blank"
             >
               Dear Left-Brained Client
             </Link>
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://candacecrawgoldman.com/qhht-and-making-it-up/"
               target="_blank"
             >
               Making it Up
             </Link>
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://quantumhealers.com/blog/the-language-of-your-higher-self-717"
               target="_blank"
             >
@@ -61,24 +58,21 @@ const Resources = () => {
           </div>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <h2 className="font-semibold">HYPNOSIS</h2>
-          <div className="flex flex-col text-center gap-2">
+          <h2 className="font-semibold uppercase">HYPNOSIS</h2>
+          <div className="flex flex-col text-center gap-2 underline text-red-700 hover:text-red-900 font-semibold">
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://quantumhealers.com/blog/i-had-a-qhht%c2%ae-session-but-could-not-be-hypnotized-506"
               target="_blank"
             >
               I Couldn't Be Hypnotized
             </Link>
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://quantumhealers.com/blog/debunking-myths-about-hypnosis-in-quantum-healing-sessions"
               target="_blank"
             >
               Debunking Hypnosis Myths
             </Link>
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://quantumhealers.com/blog/i-cant-be-hypnotizedand-other-hypnosis-myths-61"
               target="_blank"
             >
@@ -87,35 +81,28 @@ const Resources = () => {
           </div>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <h2 className="font-semibold">
+          <h2 className="font-semibold uppercase">
             Practice Regressions & Visualizations
           </h2>
-          <div className="flex flex-col text-center gap-3">
+          <div className="flex flex-col text-center gap-3 underline text-red-700 hover:text-red-900 font-semibold">
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://www.youtube.com/watch?v=Dw55twDE0_U"
               target="_blank"
             >
               444 PORTAL Guided Meditation
             </Link>
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://www.youtube.com/watch?v=PJWGV3QKIks"
               target="_blank"
             >
               Allison Coe for Worldwide Regression Week
             </Link>
-            <Link
-              className="text-gray-700 hover:text-gray-900"
-              href="https://vimeo.com/268261488/bc7e5d56de"
-              target="_blank"
-            >
+            <Link href="https://vimeo.com/268261488/bc7e5d56de" target="_blank">
               Here is a story about and a chance to briefly practice
               "visualization" in a regression featuring practitioners Candace
               Craw-Goldman and Alice Mixer
             </Link>
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://www.youtube.com/watch?v=SoH5V5BiAFA"
               target="_blank"
             >
@@ -123,7 +110,6 @@ const Resources = () => {
               Starship, another way to practice for your session
             </Link>
             <Link
-              className="text-gray-700 hover:text-gray-900"
               href="https://www.youtube.com/playlist?list=PLAWsIROSOlPwf4yzJZAQUQ77thcs656m1"
               target="_blank"
             >

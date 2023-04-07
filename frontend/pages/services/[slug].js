@@ -105,7 +105,7 @@ const ProductDetails = ({ product, products }) => {
                 <div className="flex flex-col gap-4">
                   <SlugCalendlyButton
                     url={calendly}
-                    className=" mb-6 lg:mb-0 mt-10 px-8
+                    className="mt-10 px-8
                 py-1.5 border-2 border-black h font-bold hover:bg-gray-900
                 hover:text-white ease-in duration-200 "
                   />

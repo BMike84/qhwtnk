@@ -51,7 +51,7 @@ const WRSR = () => {
         <div className="mt-6 mb-12 flex flex-col items-center text-center md:text-lg">
           <Link
             href="https://www.youtube.com/watch?v=wb6WfKcD7mU&list=PLtJDTrcCBT10ZvAi11luPMjelbC1YfK5t"
-            className="text-red-900 uppercase"
+            className="underline text-red-700 hover:text-red-900 font-semibold"
           >
             Remote Spirit Release Session YouTube Playlist
           </Link>
